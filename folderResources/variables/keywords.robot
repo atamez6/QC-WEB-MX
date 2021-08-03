@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-
+Library             OperatingSystem
 *** Keywords ***
 Abrir Navegador
   Open Browser   https://www.clarovideo.com/mexico/register    ${browser}
