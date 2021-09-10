@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 4.0.3 (Python 3.9.5 on darwin)" generated="20210831 18:21:19.948" rpa="false" schemaversion="2">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="CV-MX-WEB-LOGIN PAGES" source="/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/testCases/CV-MX-WEB-LOGIN_PAGES.robot">
+<kw name="Iniciar configuracion suitetest" library="sharedkeywords" type="SETUP">
+<kw name="run charles and record" library="sharedkeywords">
+<kw name="Start Charles Proxy In Headless Mode" library="charles_library">
+<status status="PASS" starttime="20210831 18:20:51.707" endtime="20210831 18:20:55.715"/>
+</kw>
+<kw name="Start Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20210831 18:20:55.716" endtime="20210831 18:20:55.748"/>
+</kw>
+<status status="PASS" starttime="20210831 18:20:51.707" endtime="20210831 18:20:55.749"/>
+</kw>
+<status status="PASS" starttime="20210831 18:20:51.706" endtime="20210831 18:20:55.749"/>
+</kw>
+<test id="s1-s1-t1" name="CV-WEB-MX- VALIDAR ELEMENTOS Y TEXTOS LOGIN PAGE-EMAIL PAGE">
+<kw name="Iniciar configuracion test" library="sharedkeywords" type="SETUP">
+<kw name="Configurar Directorio screenshots" library="sharedkeywords">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${screenshots}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20210831 18:20:55.751" endtime="20210831 18:20:55.751"/>
+</kw>
+<status status="PASS" starttime="20210831 18:20:55.750" endtime="20210831 18:20:55.752"/>
+</kw>
+<status status="PASS" starttime="20210831 18:20:55.750" endtime="20210831 18:20:55.752"/>
+</kw>
+<kw name="Abrir login page" library="sharedkeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/login</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210831 18:20:55.753" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/login'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:20:58.757" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:20:58.756" endtime="20210831 18:20:58.757"/>
+</kw>
+<msg timestamp="20210831 18:20:58.765" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</msg>
+<status status="FAIL" starttime="20210831 18:20:55.752" endtime="20210831 18:20:58.765"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:20:55.752" endtime="20210831 18:20:58.766"/>
+</kw>
+<kw name="Validar textos y elementos" library="sharedkeywords">
+<arg>${elementos_login_email}</arg>
+<arg>${textos_elementos_login_email}</arg>
+<status status="NOT RUN" starttime="20210831 18:20:58.767" endtime="20210831 18:20:58.767"/>
+</kw>
+<kw name="Terminar configuracion test" library="sharedkeywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:20:58.769" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:20:58.768" endtime="20210831 18:20:58.769"/>
+</kw>
+<kw name="Cerrar Browser" library="sharedkeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210831 18:20:58.770" endtime="20210831 18:20:58.770"/>
+</kw>
+<status status="PASS" starttime="20210831 18:20:58.769" endtime="20210831 18:20:58.771"/>
+</kw>
+<status status="PASS" starttime="20210831 18:20:58.768" endtime="20210831 18:20:58.771"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:20:55.749" endtime="20210831 18:20:58.771">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</status>
+</test>
+<test id="s1-s1-t2" name="CV-WEB-MX- VALIDAR ELEMENTOS Y TEXTOS LOGIN PAGE-PASSWORD PAGE">
+<kw name="Iniciar configuracion test" library="sharedkeywords" type="SETUP">
+<kw name="Configurar Directorio screenshots" library="sharedkeywords">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${screenshots}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20210831 18:20:58.775" endtime="20210831 18:20:58.776"/>
+</kw>
+<status status="PASS" starttime="20210831 18:20:58.774" endtime="20210831 18:20:58.776"/>
+</kw>
+<status status="PASS" starttime="20210831 18:20:58.773" endtime="20210831 18:20:58.776"/>
+</kw>
+<kw name="Abrir login page" library="sharedkeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/login</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210831 18:20:58.777" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/login'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:01.058" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:01.057" endtime="20210831 18:21:01.058"/>
+</kw>
+<msg timestamp="20210831 18:21:01.058" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</msg>
+<status status="FAIL" starttime="20210831 18:20:58.777" endtime="20210831 18:21:01.059"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:20:58.776" endtime="20210831 18:21:01.059"/>
+</kw>
+<kw name="Ingresar email para login" library="sharedkeywords">
+<arg>testqc01_990@gmail.com</arg>
+<status status="NOT RUN" starttime="20210831 18:21:01.059" endtime="20210831 18:21:01.059"/>
+</kw>
+<kw name="Validar textos y elementos" library="sharedkeywords">
+<arg>${elementos_login_pass}</arg>
+<arg>${textos_elementos_login_pass}</arg>
+<status status="NOT RUN" starttime="20210831 18:21:01.059" endtime="20210831 18:21:01.060"/>
+</kw>
+<kw name="Terminar configuracion test" library="sharedkeywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:01.061" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:01.060" endtime="20210831 18:21:01.061"/>
+</kw>
+<kw name="Cerrar Browser" library="sharedkeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210831 18:21:01.061" endtime="20210831 18:21:01.061"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:01.061" endtime="20210831 18:21:01.062"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:01.060" endtime="20210831 18:21:01.062"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:20:58.772" endtime="20210831 18:21:01.062">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</status>
+</test>
+<test id="s1-s1-t3" name="CV-WEB-MX- VALIDAR FUNCION LOGIN">
+<kw name="Iniciar configuracion test" library="sharedkeywords" type="SETUP">
+<kw name="Configurar Directorio screenshots" library="sharedkeywords">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${screenshots}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20210831 18:21:01.064" endtime="20210831 18:21:01.065"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:01.064" endtime="20210831 18:21:01.065"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:01.063" endtime="20210831 18:21:01.065"/>
+</kw>
+<kw name="Abrir login page" library="sharedkeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/login</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210831 18:21:01.066" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/login'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:03.352" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:03.351" endtime="20210831 18:21:03.352"/>
+</kw>
+<msg timestamp="20210831 18:21:03.353" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</msg>
+<status status="FAIL" starttime="20210831 18:21:01.066" endtime="20210831 18:21:03.353"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:01.065" endtime="20210831 18:21:03.353"/>
+</kw>
+<kw name="login CV mx" library="sharedkeywords">
+<arg>testqc01_990@gmail.com</arg>
+<arg>Claro123</arg>
+<status status="NOT RUN" starttime="20210831 18:21:03.354" endtime="20210831 18:21:03.354"/>
+</kw>
+<kw name="click imagen perfil ir a Home page cv" library="sharedkeywords">
+<status status="NOT RUN" starttime="20210831 18:21:03.354" endtime="20210831 18:21:03.354"/>
+</kw>
+<kw name="Terminar configuracion test" library="sharedkeywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:03.355" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:03.355" endtime="20210831 18:21:03.355"/>
+</kw>
+<kw name="Cerrar Browser" library="sharedkeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210831 18:21:03.356" endtime="20210831 18:21:03.357"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:03.356" endtime="20210831 18:21:03.357"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:03.355" endtime="20210831 18:21:03.357"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:01.063" endtime="20210831 18:21:03.357">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</status>
+</test>
+<test id="s1-s1-t4" name="CV-WEB-MX- VALIDAR ELEMENTOS Y TEXTOS LOGIN PAGE-ANONYMOUS PAGE">
+<kw name="Iniciar configuracion test" library="sharedkeywords" type="SETUP">
+<kw name="Configurar Directorio screenshots" library="sharedkeywords">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${screenshots}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20210831 18:21:03.360" endtime="20210831 18:21:03.360"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:03.359" endtime="20210831 18:21:03.360"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:03.359" endtime="20210831 18:21:03.360"/>
+</kw>
+<kw name="Abrir landing page" library="sharedkeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/landing</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210831 18:21:03.362" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/landing'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:05.645" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:05.644" endtime="20210831 18:21:05.645"/>
+</kw>
+<msg timestamp="20210831 18:21:05.646" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</msg>
+<status status="FAIL" starttime="20210831 18:21:03.361" endtime="20210831 18:21:05.646"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:03.361" endtime="20210831 18:21:05.646"/>
+</kw>
+<kw name="Validar textos y elementos" library="sharedkeywords">
+<arg>${elementos_landing_anonimo}</arg>
+<arg>${textos_landing_anonimo}</arg>
+<status status="NOT RUN" starttime="20210831 18:21:05.646" endtime="20210831 18:21:05.647"/>
+</kw>
+<kw name="Terminar configuracion test" library="sharedkeywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:05.648" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:05.647" endtime="20210831 18:21:05.648"/>
+</kw>
+<kw name="Cerrar Browser" library="sharedkeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210831 18:21:05.648" endtime="20210831 18:21:05.648"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:05.648" endtime="20210831 18:21:05.649"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:05.647" endtime="20210831 18:21:05.649"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:03.358" endtime="20210831 18:21:05.649">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</status>
+</test>
+<kw name="Terminar configuracion suitetest" library="sharedkeywords" type="TEARDOWN">
+<kw name="download charles .chls and close it" library="sharedkeywords">
+<kw name="Stop Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20210831 18:21:05.651" endtime="20210831 18:21:05.659"/>
+</kw>
+<kw name="Download Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20210831 18:21:05.660" endtime="20210831 18:21:05.668"/>
+</kw>
+<kw name="Terminate All Charles Proxy Sessions" library="charles_library">
+<status status="PASS" starttime="20210831 18:21:05.668" endtime="20210831 18:21:05.818"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:05.650" endtime="20210831 18:21:05.818"/>
+</kw>
+<kw name="Cerrar todos los navegadores" library="sharedkeywords">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210831 18:21:05.819" endtime="20210831 18:21:05.819"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:05.818" endtime="20210831 18:21:05.820"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:05.650" endtime="20210831 18:21:05.820"/>
+</kw>
+<doc>validar presencia de elementos y textos de cada elemento en LANDING PAGE, LOGIN PAGE, ANONYMOUS PAGE</doc>
+<status status="FAIL" starttime="20210831 18:20:51.348" endtime="20210831 18:21:05.820"/>
+</suite>
+<suite id="s1-s2" name="CV-MX-WEB-REGISTER &amp; PROMOS PAGES" source="/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/testCases/CV-MX-WEB-REGISTER_&amp;_PROMOS_PAGES.robot">
+<kw name="Iniciar configuracion suitetest" library="sharedkeywords" type="SETUP">
+<kw name="run charles and record" library="sharedkeywords">
+<kw name="Start Charles Proxy In Headless Mode" library="charles_library">
+<status status="PASS" starttime="20210831 18:21:06.408" endtime="20210831 18:21:10.417"/>
+</kw>
+<kw name="Start Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20210831 18:21:10.418" endtime="20210831 18:21:10.446"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:06.408" endtime="20210831 18:21:10.446"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:06.408" endtime="20210831 18:21:10.446"/>
+</kw>
+<test id="s1-s2-t1" name="CV-WEB-MX- VALIDAR ELEMENTOS Y TEXTOS REGISTER PAGE">
+<kw name="Iniciar configuracion test" library="sharedkeywords" type="SETUP">
+<kw name="Configurar Directorio screenshots" library="sharedkeywords">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${screenshots}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20210831 18:21:10.448" endtime="20210831 18:21:10.449"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:10.448" endtime="20210831 18:21:10.449"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:10.447" endtime="20210831 18:21:10.449"/>
+</kw>
+<kw name="Abrir register page" library="sharedkeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/register</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210831 18:21:10.450" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/register'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:12.756" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:12.755" endtime="20210831 18:21:12.757"/>
+</kw>
+<msg timestamp="20210831 18:21:12.758" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</msg>
+<status status="FAIL" starttime="20210831 18:21:10.450" endtime="20210831 18:21:12.759"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:10.449" endtime="20210831 18:21:12.759"/>
+</kw>
+<kw name="Validar textos y elementos" library="sharedkeywords">
+<arg>${elementos_register_page}</arg>
+<arg>${textos_register_page}</arg>
+<status status="NOT RUN" starttime="20210831 18:21:12.759" endtime="20210831 18:21:12.759"/>
+</kw>
+<kw name="Terminar configuracion test" library="sharedkeywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:12.760" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:12.760" endtime="20210831 18:21:12.760"/>
+</kw>
+<kw name="Cerrar Browser" library="sharedkeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210831 18:21:12.761" endtime="20210831 18:21:12.761"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:12.761" endtime="20210831 18:21:12.761"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:12.760" endtime="20210831 18:21:12.762"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:10.447" endtime="20210831 18:21:12.762">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</status>
+</test>
+<test id="s1-s2-t2" name="CV-WEB-MX- VALIDAR ELEMENTOS Y TEXTOS REGISTER PAGE-T&amp;C FRAME">
+<kw name="Iniciar configuracion test" library="sharedkeywords" type="SETUP">
+<kw name="Configurar Directorio screenshots" library="sharedkeywords">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${screenshots}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20210831 18:21:12.764" endtime="20210831 18:21:12.764"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:12.763" endtime="20210831 18:21:12.765"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:12.763" endtime="20210831 18:21:12.765"/>
+</kw>
+<kw name="Abrir register page" library="sharedkeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/register</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210831 18:21:12.766" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/register'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:14.981" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:14.980" endtime="20210831 18:21:14.981"/>
+</kw>
+<msg timestamp="20210831 18:21:14.982" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</msg>
+<status status="FAIL" starttime="20210831 18:21:12.765" endtime="20210831 18:21:14.982"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:12.765" endtime="20210831 18:21:14.982"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_terms_link']}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:14.983" endtime="20210831 18:21:14.983"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_terminosycondiciones['texto_terminos']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:14.983" endtime="20210831 18:21:14.983"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${textoterminos}</var>
+<arg>${elementos_terminosycondiciones['texto_terminos']}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:14.983" endtime="20210831 18:21:14.983"/>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<var>${textoficialterminos}</var>
+<arg>/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/CV-POM/terminosyCondicionesPage/terminosycondicionesMX2021.txt</arg>
+<arg>encoding=UTF-8</arg>
+<arg>encoding_errors=strict</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:14.984" endtime="20210831 18:21:14.984"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${textoterminos}</arg>
+<arg>${textoficialterminos}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:14.984" endtime="20210831 18:21:14.984"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${textoterminos}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:14.984" endtime="20210831 18:21:14.984"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${textoficialterminos}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:14.984" endtime="20210831 18:21:14.985"/>
+</kw>
+<kw name="Terminar configuracion test" library="sharedkeywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:14.986" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:14.986" endtime="20210831 18:21:14.986"/>
+</kw>
+<kw name="Cerrar Browser" library="sharedkeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210831 18:21:14.987" endtime="20210831 18:21:14.987"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:14.986" endtime="20210831 18:21:14.988"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:14.985" endtime="20210831 18:21:14.988"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:12.762" endtime="20210831 18:21:14.988">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</status>
+</test>
+<test id="s1-s2-t3" name="CV-WEB-MX- VALIDAR ELEMENTOS Y TEXTOS REGISTER PAGE-TELMEX FRAME">
+<kw name="Iniciar configuracion test" library="sharedkeywords" type="SETUP">
+<kw name="Configurar Directorio screenshots" library="sharedkeywords">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${screenshots}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20210831 18:21:14.991" endtime="20210831 18:21:14.991"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:14.990" endtime="20210831 18:21:14.992"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:14.990" endtime="20210831 18:21:14.992"/>
+</kw>
+<kw name="Abrir register page" library="sharedkeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/register</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210831 18:21:14.993" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/register'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:17.261" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:17.260" endtime="20210831 18:21:17.261"/>
+</kw>
+<msg timestamp="20210831 18:21:17.261" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</msg>
+<status status="FAIL" starttime="20210831 18:21:14.992" endtime="20210831 18:21:17.262"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:14.992" endtime="20210831 18:21:17.262"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_terms_promo']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:17.263" endtime="20210831 18:21:17.263"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_terms_promo']}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:17.263" endtime="20210831 18:21:17.263"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_conocePromos['telmex_texto_promos']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:17.263" endtime="20210831 18:21:17.263"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${textotelmex_promos}</var>
+<arg>${elementos_conocePromos['telmex_texto_promos']}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:17.264" endtime="20210831 18:21:17.264"/>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<var>${textooficialtelmex_promos}</var>
+<arg>/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/CV-POM/conocelaspromocionesPage/textopromocionesTELMEX.txt</arg>
+<arg>encoding=UTF-8</arg>
+<arg>encoding_errors=strict</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:17.264" endtime="20210831 18:21:17.264"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${textotelmex_promos}</arg>
+<arg>${textooficialtelmex_promos}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:17.264" endtime="20210831 18:21:17.264"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${textotelmex_promos}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:17.264" endtime="20210831 18:21:17.264"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${textooficialtelmex_promos}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:17.265" endtime="20210831 18:21:17.265"/>
+</kw>
+<kw name="Terminar configuracion test" library="sharedkeywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:17.266" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:17.265" endtime="20210831 18:21:17.266"/>
+</kw>
+<kw name="Cerrar Browser" library="sharedkeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210831 18:21:17.266" endtime="20210831 18:21:17.266"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:17.266" endtime="20210831 18:21:17.267"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:17.265" endtime="20210831 18:21:17.267"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:14.989" endtime="20210831 18:21:17.267">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</status>
+</test>
+<test id="s1-s2-t4" name="CV-WEB-MX- VALIDAR ELEMENTOS Y TEXTOS REGISTER PAGE-TELCEL FRAME">
+<kw name="Iniciar configuracion test" library="sharedkeywords" type="SETUP">
+<kw name="Configurar Directorio screenshots" library="sharedkeywords">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${screenshots}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20210831 18:21:17.269" endtime="20210831 18:21:17.269"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:17.268" endtime="20210831 18:21:17.269"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:17.268" endtime="20210831 18:21:17.270"/>
+</kw>
+<kw name="Abrir register page" library="sharedkeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/register</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210831 18:21:17.270" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/register'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:19.549" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:19.548" endtime="20210831 18:21:19.549"/>
+</kw>
+<msg timestamp="20210831 18:21:19.550" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</msg>
+<status status="FAIL" starttime="20210831 18:21:17.270" endtime="20210831 18:21:19.550"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:17.270" endtime="20210831 18:21:19.550"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_terms_promo']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:19.551" endtime="20210831 18:21:19.551"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_terms_promo']}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:19.551" endtime="20210831 18:21:19.551"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_conocePromos['telcel_texto_promos']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:19.551" endtime="20210831 18:21:19.551"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${textotelcel_promos}</var>
+<arg>${elementos_conocePromos['telcel_texto_promos']}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:19.551" endtime="20210831 18:21:19.551"/>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<var>${textooficialtelcel_promos}</var>
+<arg>/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/CV-POM/conocelaspromocionesPage/textopromocionesTELCEL.txt</arg>
+<arg>encoding=UTF-8</arg>
+<arg>encoding_errors=strict</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:19.552" endtime="20210831 18:21:19.552"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${textotelcel_promos}</arg>
+<arg>${textooficialtelcel_promos}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:19.552" endtime="20210831 18:21:19.552"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${textotelcel_promos}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:19.552" endtime="20210831 18:21:19.552"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${textooficialtelcel_promos}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20210831 18:21:19.552" endtime="20210831 18:21:19.552"/>
+</kw>
+<kw name="Terminar configuracion test" library="sharedkeywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210831 18:21:19.553" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210831 18:21:19.553" endtime="20210831 18:21:19.553"/>
+</kw>
+<kw name="Cerrar Browser" library="sharedkeywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210831 18:21:19.554" endtime="20210831 18:21:19.554"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:19.554" endtime="20210831 18:21:19.555"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:19.553" endtime="20210831 18:21:19.555"/>
+</kw>
+<status status="FAIL" starttime="20210831 18:21:17.267" endtime="20210831 18:21:19.555">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</status>
+</test>
+<kw name="Terminar configuracion suitetest" library="sharedkeywords" type="TEARDOWN">
+<kw name="download charles .chls and close it" library="sharedkeywords">
+<kw name="Stop Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20210831 18:21:19.557" endtime="20210831 18:21:19.564"/>
+</kw>
+<kw name="Download Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20210831 18:21:19.565" endtime="20210831 18:21:19.573"/>
+</kw>
+<kw name="Terminate All Charles Proxy Sessions" library="charles_library">
+<status status="PASS" starttime="20210831 18:21:19.573" endtime="20210831 18:21:19.700"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:19.557" endtime="20210831 18:21:19.700"/>
+</kw>
+<kw name="Cerrar todos los navegadores" library="sharedkeywords">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20210831 18:21:19.701" endtime="20210831 18:21:19.701"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:19.700" endtime="20210831 18:21:19.701"/>
+</kw>
+<status status="PASS" starttime="20210831 18:21:19.556" endtime="20210831 18:21:19.702"/>
+</kw>
+<doc>validar presencia de elementos y textos de cada elemento en REGISTER PAGE, T&amp;C PAGE, PROMOTIONS_TELMEX, PROMOTIONS_TELCEL</doc>
+<status status="FAIL" starttime="20210831 18:21:06.213" endtime="20210831 18:21:19.702"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 2 executions.</doc>
+<status status="FAIL" starttime="20210831 18:20:51.329" endtime="20210831 18:21:19.707"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="8" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="8" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s1" name="CV-MX-WEB-LOGIN PAGES">Suites.CV-MX-WEB-LOGIN PAGES</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s2" name="CV-MX-WEB-REGISTER &amp; PROMOS PAGES">Suites.CV-MX-WEB-REGISTER &amp; PROMOS PAGES</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210831 18:20:51.357" level="ERROR">Error in resource file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/keywords/sharedkeywords.robot': Creating keyword 'validador de texto con txt' failed: Invalid argument specification: Invalid argument syntax '${e1['${element}']'.</msg>
+<msg timestamp="20210831 18:20:51.705" level="ERROR">Error in file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/keywords/sharedkeywords.robot' on line 25: Variable file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/CV-POM/EC-brf-6744/Licencia_usuario_final.py' does not exist.</msg>
+<msg timestamp="20210831 18:20:51.705" level="ERROR">Error in file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/keywords/sharedkeywords.robot' on line 26: Variable file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/CV-POM/EC-brf-6744/politicas_de_privacidad.py' does not exist.</msg>
+<msg timestamp="20210831 18:21:06.221" level="ERROR">Error in resource file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/keywords/sharedkeywords.robot': Creating keyword 'validador de texto con txt' failed: Invalid argument specification: Invalid argument syntax '${e1['${element}']'.</msg>
+<msg timestamp="20210831 18:21:06.407" level="ERROR">Error in file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/keywords/sharedkeywords.robot' on line 25: Variable file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/CV-POM/EC-brf-6744/Licencia_usuario_final.py' does not exist.</msg>
+<msg timestamp="20210831 18:21:06.407" level="ERROR">Error in file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/keywords/sharedkeywords.robot' on line 26: Variable file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/CV-POM/EC-brf-6744/politicas_de_privacidad.py' does not exist.</msg>
+</errors>
+</robot>

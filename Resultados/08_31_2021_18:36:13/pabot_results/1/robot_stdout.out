@@ -1,0 +1,175 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.CV-MX-WEB-REGISTER & PROMOS PAGES :: validar presencia de elementos ...
+==============================================================================
+
+
+
+
+Loading Application 'Charles'
+Working Directory: '/Users/at'
+Java Runtime (jdk-11.0.9_11.jdk) Relative Path: '/Users/at/Library/charles/Contents/PlugIns/jdk-11.0.9_11.jdk' (dylib: /Users/at/Library/charles/Contents/PlugIns/jdk-11.0.9_11.jdk/Contents/Home/lib/jli/libjli.dylib)
+Launchpath: /Users/at/Library/charles/Contents/PlugIns/jdk-11.0.9_11.jdk/Contents/Home/lib/jli/libjli.dylib
+Main Bundle Path: '/Users/at/Library/charles'
+Main Class Name: 'com.xk72.charles.macos.gui.Main'
+Option: -Dcom.apple.mrj.application.live-resize=true
+Option: -Dapple.laf.useScreenMenuBar=true
+Option: -Dapple.mrj.application.growbox.intrudes=true
+Option: -Dcom.apple.hwaccel=true
+Option: -Dswing.aatext=true
+Option: -Dapple.awt.graphics.UseQuartz=true
+Option: -Djava.net.preferIPv4Stack=false
+Option: -Djava.net.preferIPv6Addresses=true
+Option: -Dcharles.home=/Users/at/Library/charles/Contents
+Option: -Xdock:icon=/Users/at/Library/charles/Contents/Resources/charles.icns
+Option: -Xdock:name=Charles
+Option: -Dcom.apple.mrj.application.apple.menu.about.name=Charles
+Option: -Dapple.awt.application.appearance=system
+Command line passed to application:
+Arg 0: 'Charles'
+Arg 1: '-Djava.library.path=/Users/at/Library/charles/Contents/MacOS'
+Arg 2: '-Djava.class.path=/Users/at/Library/charles/Contents/Java/charles.jar'
+Arg 3: '-DLibraryDirectory=/Users/at/Library'
+Arg 4: '-DDocumentsDirectory=/Users/at/Documents'
+Arg 5: '-DApplicationSupportDirectory=/Users/at/Library/Application Support'
+Arg 6: '-DCachesDirectory=/Users/at/Library/Caches'
+Arg 7: '-DApplicationDirectory=/Users/at/Applications'
+Arg 8: '-DAutosavedInformationDirectory=/Users/at/Library/Autosave Information'
+Arg 9: '-DDesktopDirectory=/Users/at/Desktop'
+Arg 10: '-DDownloadsDirectory=/Users/at/Downloads'
+Arg 11: '-DMoviesDirectory=/Users/at/Movies'
+Arg 12: '-DMusicDirectory=/Users/at/Music'
+Arg 13: '-DPicturesDirectory=/Users/at/Pictures'
+Arg 14: '-DSharedPublicDirectory=/Users/at/Public'
+Arg 15: '-DSystemLibraryDirectory=/Library'
+Arg 16: '-DSystemApplicationSupportDirectory=/Library/Application Support'
+Arg 17: '-DSystemCachesDirectory=/Library/Caches'
+Arg 18: '-DSystemApplicationDirectory=/Applications'
+Arg 19: '-DSystemUserDirectory=/Users'
+Arg 20: '-DUserHome=/Users/at'
+Arg 21: '-DSandboxEnabled=true'
+Arg 22: '-DDarkMode=true'
+Arg 23: '-DLaunchModifierFlags=0'
+Arg 24: '-DLaunchModifierFlagCapsLock=false'
+Arg 25: '-DLaunchModifierFlagShift=false'
+Arg 26: '-DLaunchModifierFlagControl=false'
+Arg 27: '-DLaunchModifierFlagOption=false'
+Arg 28: '-DLaunchModifierFlagCommand=false'
+Arg 29: '-DLaunchModifierFlagNumericPad=false'
+Arg 30: '-DLaunchModifierFlagHelp=false'
+Arg 31: '-DLaunchModifierFlagFunction=false'
+Arg 32: '-Dcom.apple.mrj.application.live-resize=true'
+Arg 33: '-Dapple.laf.useScreenMenuBar=true'
+Arg 34: '-Dapple.mrj.application.growbox.intrudes=true'
+Arg 35: '-Dcom.apple.hwaccel=true'
+Arg 36: '-Dswing.aatext=true'
+Arg 37: '-Dapple.awt.graphics.UseQuartz=true'
+Arg 38: '-Djava.net.preferIPv4Stack=false'
+Arg 39: '-Djava.net.preferIPv6Addresses=true'
+Arg 40: '-Dcharles.home=/Users/at/Library/charles/Contents'
+Arg 41: '-Xdock:icon=/Users/at/Library/charles/Contents/Resources/charles.icns'
+Arg 42: '-Xdock:name=Charles'
+Arg 43: '-Dcom.apple.mrj.application.apple.menu.about.name=Charles'
+Arg 44: '-Dapple.awt.application.appearance=system'
+Arg 45: 'com.xk72.charles.macos.gui.Main'
+Arg 46: '-headless'
+Arg 47: '-config'
+Arg 48: '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/charles_proxy/com.xk72.charles.config'
+
+
+
+
+Loading Application 'Charles'
+Working Directory: '/Users/at'
+Java Runtime (jdk-11.0.9_11.jdk) Relative Path: '/Users/at/Library/charles/Contents/PlugIns/jdk-11.0.9_11.jdk' (dylib: /Users/at/Library/charles/Contents/PlugIns/jdk-11.0.9_11.jdk/Contents/Home/lib/jli/libjli.dylib)
+Launchpath: /Users/at/Library/charles/Contents/PlugIns/jdk-11.0.9_11.jdk/Contents/Home/lib/jli/libjli.dylib
+Main Bundle Path: '/Users/at/Library/charles'
+Main Class Name: 'com.xk72.charles.macos.gui.Main'
+Option: -Dcom.apple.mrj.application.live-resize=true
+Option: -Dapple.laf.useScreenMenuBar=true
+Option: -Dapple.mrj.application.growbox.intrudes=true
+Option: -Dcom.apple.hwaccel=true
+Option: -Dswing.aatext=true
+Option: -Dapple.awt.graphics.UseQuartz=true
+Option: -Djava.net.preferIPv4Stack=false
+Option: -Djava.net.preferIPv6Addresses=true
+Option: -Dcharles.home=/Users/at/Library/charles/Contents
+Option: -Xdock:icon=/Users/at/Library/charles/Contents/Resources/charles.icns
+Option: -Xdock:name=Charles
+Option: -Dcom.apple.mrj.application.apple.menu.about.name=Charles
+Option: -Dapple.awt.application.appearance=system
+Command line passed to application:
+Arg 0: 'Charles'
+Arg 1: '-Djava.library.path=/Users/at/Library/charles/Contents/MacOS'
+Arg 2: '-Djava.class.path=/Users/at/Library/charles/Contents/Java/charles.jar'
+Arg 3: '-DLibraryDirectory=/Users/at/Library'
+Arg 4: '-DDocumentsDirectory=/Users/at/Documents'
+Arg 5: '-DApplicationSupportDirectory=/Users/at/Library/Application Support'
+Arg 6: '-DCachesDirectory=/Users/at/Library/Caches'
+Arg 7: '-DApplicationDirectory=/Users/at/Applications'
+Arg 8: '-DAutosavedInformationDirectory=/Users/at/Library/Autosave Information'
+Arg 9: '-DDesktopDirectory=/Users/at/Desktop'
+Arg 10: '-DDownloadsDirectory=/Users/at/Downloads'
+Arg 11: '-DMoviesDirectory=/Users/at/Movies'
+Arg 12: '-DMusicDirectory=/Users/at/Music'
+Arg 13: '-DPicturesDirectory=/Users/at/Pictures'
+Arg 14: '-DSharedPublicDirectory=/Users/at/Public'
+Arg 15: '-DSystemLibraryDirectory=/Library'
+Arg 16: '-DSystemApplicationSupportDirectory=/Library/Application Support'
+Arg 17: '-DSystemCachesDirectory=/Library/Caches'
+Arg 18: '-DSystemApplicationDirectory=/Applications'
+Arg 19: '-DSystemUserDirectory=/Users'
+Arg 20: '-DUserHome=/Users/at'
+Arg 21: '-DSandboxEnabled=true'
+Arg 22: '-DDarkMode=true'
+Arg 23: '-DLaunchModifierFlags=0'
+Arg 24: '-DLaunchModifierFlagCapsLock=false'
+Arg 25: '-DLaunchModifierFlagShift=false'
+Arg 26: '-DLaunchModifierFlagControl=false'
+Arg 27: '-DLaunchModifierFlagOption=false'
+Arg 28: '-DLaunchModifierFlagCommand=false'
+Arg 29: '-DLaunchModifierFlagNumericPad=false'
+Arg 30: '-DLaunchModifierFlagHelp=false'
+Arg 31: '-DLaunchModifierFlagFunction=false'
+Arg 32: '-Dcom.apple.mrj.application.live-resize=true'
+Arg 33: '-Dapple.laf.useScreenMenuBar=true'
+Arg 34: '-Dapple.mrj.application.growbox.intrudes=true'
+Arg 35: '-Dcom.apple.hwaccel=true'
+Arg 36: '-Dswing.aatext=true'
+Arg 37: '-Dapple.awt.graphics.UseQuartz=true'
+Arg 38: '-Djava.net.preferIPv4Stack=false'
+Arg 39: '-Djava.net.preferIPv6Addresses=true'
+Arg 40: '-Dcharles.home=/Users/at/Library/charles/Contents'
+Arg 41: '-Xdock:icon=/Users/at/Library/charles/Contents/Resources/charles.icns'
+Arg 42: '-Xdock:name=Charles'
+Arg 43: '-Dcom.apple.mrj.application.apple.menu.about.name=Charles'
+Arg 44: '-Dapple.awt.application.appearance=system'
+Arg 45: 'com.xk72.charles.macos.gui.Main'
+Arg 46: '-headless'
+Arg 47: '-config'
+Arg 48: '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/charles_proxy/com.xk72.charles.config'
+Registered to: AMX CONTENIDO, S.A. DE C.V. - Multi-Site License
+CV-WEB-MX- VALIDAR ELEMENTOS Y TEXTOS REGISTER PAGE                   | FAIL |
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+------------------------------------------------------------------------------
+CV-WEB-MX- VALIDAR ELEMENTOS Y TEXTOS REGISTER PAGE-T&C FRAME         | FAIL |
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+------------------------------------------------------------------------------
+CV-WEB-MX- VALIDAR ELEMENTOS Y TEXTOS REGISTER PAGE-TELMEX FRAME      | FAIL |
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+------------------------------------------------------------------------------
+CV-WEB-MX- VALIDAR ELEMENTOS Y TEXTOS REGISTER PAGE-TELCEL FRAME      | FAIL |
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 91
+Current browser version is 93.0.4577.63 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+------------------------------------------------------------------------------
+Suites.CV-MX-WEB-REGISTER & PROMOS PAGES :: validar presencia de e... | FAIL |
+4 tests, 0 passed, 4 failed
+==============================================================================
+Suites                                                                | FAIL |
+4 tests, 0 passed, 4 failed
+==============================================================================
+Output:  /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/Resultados/08_31_2021_18:36:13/pabot_results/1/output.xml

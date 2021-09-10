@@ -1,0 +1,14 @@
+[ ERROR ] Error in resource file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/keywords/sharedkeywords.robot': Creating keyword 'validador de texto con txt' failed: Invalid argument specification: Invalid argument syntax '${e1['${element}']'.
+[ ERROR ] Error in file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/keywords/sharedkeywords.robot' on line 25: Variable file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/CV-POM/EC-brf-6744/Licencia_usuario_final.py' does not exist.
+[ ERROR ] Error in file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/keywords/sharedkeywords.robot' on line 26: Variable file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/CV-POM/EC-brf-6744/politicas_de_privacidad.py' does not exist.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/Users/at/Library/charles/Contents/Java/xstream-1.4.12.jar) to field java.util.TreeMap.comparator
+WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+INFO     com.xk72.charles.CharlesContext                       New Charles Proxy Version: Charles v4.6.2 has been released.
+Would you like to go to the website to download it now?
+WARNING  com.xk72.charles.CharlesContext                       Unable to prompt for options. Choosing default option.
+Launch Browser: Launching an external browser is not currently supported on this platform.
+https://www.charlesproxy.com/download/
+No matching processes belonging to you were found

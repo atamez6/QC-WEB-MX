@@ -1,0 +1,99 @@
+[ ERROR ] Error in resource file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/keywords/sharedkeywords.robot': Creating keyword 'validador de texto con txt' failed: Invalid argument specification: Invalid argument syntax '${e1['${element}']'.
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/Users/at/Library/charles/Contents/Java/xstream-1.4.12.jar) to field java.util.TreeMap.comparator
+WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+INFO     com.xk72.charles.CharlesContext                       New Charles Proxy Version: Charles v4.6.2 has been released.
+Would you like to go to the website to download it now?
+WARNING  com.xk72.charles.CharlesContext                       Unable to prompt for options. Choosing default option.
+Launch Browser: Launching an external browser is not currently supported on this platform.
+https://www.charlesproxy.com/download/
+INFO     com.xk72.proxy.http2.Http2ProxyHandler.FrameHandler   #263956081 [www.facebook.com] SERVER frame handler error
+javax.net.ssl.SSLProtocolException: Illegal packet size: 51160
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(Unknown Source)
+	at java.base/java.io.FilterInputStream.read(Unknown Source)
+	at java.base/java.io.FilterInputStream.read(Unknown Source)
+	at java.base/java.io.PushbackInputStream.read(Unknown Source)
+	at com.xk72.proxy.io.uAkK.uQqp(Unknown Source)
+	at com.xk72.proxy.io.uAkK.read(Unknown Source)
+	at com.xk72.proxy.io.uAkK.eCYm(Unknown Source)
+	at com.xk72.proxy.http2.Frame.XdKP(Unknown Source)
+	at com.xk72.proxy.http2.uAkK.XdKP(Unknown Source)
+	at com.xk72.proxy.http2.CHDR.run(Unknown Source)
+	at com.xk72.util.uAtD.run(Unknown Source)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+INFO     com.xk72.proxy.http2.Http2ProxyHandler.FrameHandler   #954576439 [pagead2.googlesyndication.com] SERVER frame handler error
+java.net.SocketException: Connection or outbound has closed
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(Unknown Source)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(Unknown Source)
+	at java.base/java.io.BufferedOutputStream.flush(Unknown Source)
+	at java.base/java.io.FilterOutputStream.flush(Unknown Source)
+	at com.xk72.proxy.http2.Frame.XdKP(Unknown Source)
+	at com.xk72.proxy.http2.Http2ProxyHandler$Http2EndPoint.uQqp(Unknown Source)
+	at com.xk72.proxy.http2.CHDR.run(Unknown Source)
+	at com.xk72.util.uAtD.run(Unknown Source)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+INFO     com.xk72.proxy.http2.Http2ProxyHandler.FrameHandler   #2129996721 [cx.atdmt.com] SERVER frame handler error
+javax.net.ssl.SSLProtocolException: Bad input record size, TLSCiphertext.length = 37014
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(Unknown Source)
+	at java.base/sun.security.ssl.SSLTransport.decode(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(Unknown Source)
+	at java.base/java.io.FilterInputStream.read(Unknown Source)
+	at java.base/java.io.FilterInputStream.read(Unknown Source)
+	at java.base/java.io.PushbackInputStream.read(Unknown Source)
+	at com.xk72.proxy.io.uAkK.uQqp(Unknown Source)
+	at com.xk72.proxy.io.uAkK.read(Unknown Source)
+	at com.xk72.proxy.io.uAkK.eCYm(Unknown Source)
+	at com.xk72.proxy.http2.Frame.XdKP(Unknown Source)
+	at com.xk72.proxy.http2.uAkK.XdKP(Unknown Source)
+	at com.xk72.proxy.http2.CHDR.run(Unknown Source)
+	at com.xk72.util.uAtD.run(Unknown Source)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+INFO     com.xk72.proxy.http2.Http2ProxyHandler.FrameHandler   #1379924156 [t.co] SERVER frame handler error
+javax.net.ssl.SSLException: Insufficient buffer remaining for AEAD cipher fragment (0). Needs to be more than or equal to IV size (8) + tag size (16)
+	at java.base/sun.security.ssl.Alert.createSSLException(Unknown Source)
+	at java.base/sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at java.base/sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at java.base/sun.security.ssl.TransportContext.fatal(Unknown Source)
+	at java.base/sun.security.ssl.SSLTransport.decode(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(Unknown Source)
+	at java.base/java.io.FilterInputStream.read(Unknown Source)
+	at java.base/java.io.FilterInputStream.read(Unknown Source)
+	at java.base/java.io.PushbackInputStream.read(Unknown Source)
+	at com.xk72.proxy.io.uAkK.uQqp(Unknown Source)
+	at com.xk72.proxy.io.uAkK.read(Unknown Source)
+	at com.xk72.proxy.io.uAkK.eCYm(Unknown Source)
+	at com.xk72.proxy.http2.Frame.XdKP(Unknown Source)
+	at com.xk72.proxy.http2.uAkK.XdKP(Unknown Source)
+	at com.xk72.proxy.http2.CHDR.run(Unknown Source)
+	at com.xk72.util.uAtD.run(Unknown Source)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: javax.crypto.BadPaddingException: Insufficient buffer remaining for AEAD cipher fragment (0). Needs to be more than or equal to IV size (8) + tag size (16)
+	at java.base/sun.security.ssl.SSLCipher$T12GcmReadCipherGenerator$GcmReadCipher.decrypt(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(Unknown Source)
+	... 19 more
+No matching processes belonging to you were found
