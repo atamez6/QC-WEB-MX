@@ -1,4 +1,4 @@
-#Elementos landing anonimo CV webMX
+
 
 elementos_landing_anonimo = {
         #"cv_logo": "xpath=/html/body/div[2]/div/div[1]/div/header/a/img",

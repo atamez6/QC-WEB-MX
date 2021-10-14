@@ -4,8 +4,9 @@ elementos_register_page = {
 
         "reg_registrate": "xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[1]",
         "reg_cualemail?": "xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[2]/div[1]",
-        "reg_emailtextbox": "xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[2]/div[2]",
-        "reg_terms": "xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]/div[2]/div",
+        "reg_emailtextbox": "xpath=//input[@id='emailRegister']",
+        "reg_terms": "xpath=//*[@class='_1pakn']//span[contains(text(),'Acepto los')]",
+        "reg_terms_check": "xpath=//span[@class='_3i1FC']",
         "reg_terms_link":"xpath=//a[normalize-space()='Términos y Condiciones']",
         "reg_siguiente": "xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button",
         "reg_cancelar": "xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[5]/div/button",

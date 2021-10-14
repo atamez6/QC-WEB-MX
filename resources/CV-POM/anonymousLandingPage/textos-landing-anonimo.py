@@ -1,4 +1,4 @@
-#textos landing anonimo CV webMX
+
 textos_landing_anonimo = {
 
         "as_t1": "¡Todo lo que te gusta en un sólo lugar!",
