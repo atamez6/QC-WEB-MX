@@ -1,0 +1,2069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.7 on darwin)" generated="20211013 18:31:33.100" rpa="false" schemaversion="2">
+<suite id="s1" name="CV-MX-WEB-ACCESO &amp; CV-MX-WEB-NAVEGACION">
+<suite id="s1-s1" name="CV-MX-WEB-ACCESO" source="/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/testCases/CV-MX-WEB-ACCESO.robot">
+<test id="s1-s1-t1" name="CV-MX-WEB-ACCESO-VALIDAR LOGIN CON USUARIO CORRECTO">
+<kw name="-VALIDAR USUARIO VALIDO CV-" library="common_functionalities">
+<arg>${email_valido}</arg>
+<arg>${pass_valido}</arg>
+<kw name="-ABRIR LOGIN PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/login</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211013 18:31:33.302" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/login'.</msg>
+<status status="PASS" starttime="20211013 18:31:33.302" endtime="20211013 18:31:41.822"/>
+</kw>
+<status status="PASS" starttime="20211013 18:31:33.301" endtime="20211013 18:31:41.822"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA LOGIN-" library="common_functionalities">
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:31:41.823" endtime="20211013 18:31:41.844"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:31:41.845" level="INFO">Typing text 's_tamezaa@globalhitss.com' into text field 'xpath=//*[@id="emailLogin"]'.</msg>
+<status status="PASS" starttime="20211013 18:31:41.845" endtime="20211013 18:31:41.993"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_email['log_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:31:41.995" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20211013 18:31:41.993" endtime="20211013 18:31:42.101"/>
+</kw>
+<status status="PASS" starttime="20211013 18:31:41.823" endtime="20211013 18:31:42.101"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA LOGIN-" library="common_functionalities">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:31:42.102" endtime="20211013 18:31:42.459"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:31:42.460" level="INFO">Typing text 'Claro123!' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20211013 18:31:42.459" endtime="20211013 18:31:42.561"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_pass['log_pass_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:31:42.562" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button'.</msg>
+<status status="PASS" starttime="20211013 18:31:42.561" endtime="20211013 18:31:42.774"/>
+</kw>
+<status status="PASS" starttime="20211013 18:31:42.101" endtime="20211013 18:31:42.774"/>
+</kw>
+<kw name="-CLICK IMAGEN DE PERFIL-" library="common_functionalities">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211013 18:31:42.775" endtime="20211013 18:31:48.813"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211013 18:31:48.814" level="INFO">Clicking element 'xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]'.</msg>
+<status status="PASS" starttime="20211013 18:31:48.813" endtime="20211013 18:31:48.853"/>
+</kw>
+<status status="PASS" starttime="20211013 18:31:42.774" endtime="20211013 18:31:48.853"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//i[@name='search']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211013 18:31:59.386" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:31:59.108" endtime="20211013 18:31:59.387"/>
+</kw>
+<msg timestamp="20211013 18:31:59.397" level="FAIL">Element 'xpath=//i[@name='search']' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20211013 18:31:48.853" endtime="20211013 18:31:59.397"/>
+</kw>
+<status status="FAIL" starttime="20211013 18:31:33.301" endtime="20211013 18:31:59.398"/>
+</kw>
+<kw name="-CERRAR TODOS LOS NAVEGADORES-" library="common_functionalities">
+<status status="NOT RUN" starttime="20211013 18:31:59.398" endtime="20211013 18:31:59.398"/>
+</kw>
+<status status="FAIL" starttime="20211013 18:31:33.300" endtime="20211013 18:31:59.399">Element 'xpath=//i[@name='search']' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-s1-t2" name="CV-MX-WEB-ACCESO-VALIDAR LOGIN CON PASSWORD INCORRECTO">
+<kw name="-VALIDAR USUARIO NO VALIDO CV-" library="common_functionalities">
+<arg>${email_valido}</arg>
+<arg>${pass_novalido}</arg>
+<kw name="-ABRIR LOGIN PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/login</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211013 18:31:59.401" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/login'.</msg>
+<status status="PASS" starttime="20211013 18:31:59.401" endtime="20211013 18:32:03.660"/>
+</kw>
+<status status="PASS" starttime="20211013 18:31:59.401" endtime="20211013 18:32:03.660"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA LOGIN-" library="common_functionalities">
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:32:03.661" endtime="20211013 18:32:07.495"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:07.496" level="INFO">Typing text 's_tamezaa@globalhitss.com' into text field 'xpath=//*[@id="emailLogin"]'.</msg>
+<status status="PASS" starttime="20211013 18:32:07.495" endtime="20211013 18:32:07.637"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_email['log_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:07.638" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20211013 18:32:07.637" endtime="20211013 18:32:07.745"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:03.660" endtime="20211013 18:32:07.745"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA LOGIN-" library="common_functionalities">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:32:07.746" endtime="20211013 18:32:08.062"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:08.063" level="INFO">Typing text 'Claro123' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20211013 18:32:08.063" endtime="20211013 18:32:08.130"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_pass['log_pass_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:08.132" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button'.</msg>
+<status status="PASS" starttime="20211013 18:32:08.131" endtime="20211013 18:32:08.230"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:07.745" endtime="20211013 18:32:08.230"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class='_l88cd _2hS3x']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211013 18:32:08.230" endtime="20211013 18:32:08.241"/>
+</kw>
+<status status="PASS" starttime="20211013 18:31:59.400" endtime="20211013 18:32:08.241"/>
+</kw>
+<kw name="-CERRAR TODOS LOS NAVEGADORES-" library="common_functionalities">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211013 18:32:08.241" endtime="20211013 18:32:08.433"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:08.241" endtime="20211013 18:32:08.433"/>
+</kw>
+<status status="PASS" starttime="20211013 18:31:59.399" endtime="20211013 18:32:08.433"/>
+</test>
+<test id="s1-s1-t3" name="CV-MX-WEB-ACCESO-VALIDAR LOGOUT">
+<kw name="-LOGIN HOME CV-" library="common_functionalities">
+<arg>${email_valido}</arg>
+<arg>${pass_valido}</arg>
+<kw name="-ABRIR LOGIN PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/login</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211013 18:32:08.436" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/login'.</msg>
+<status status="PASS" starttime="20211013 18:32:08.436" endtime="20211013 18:32:12.873"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:08.436" endtime="20211013 18:32:12.873"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA LOGIN-" library="common_functionalities">
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:32:12.875" endtime="20211013 18:32:15.372"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:15.375" level="INFO">Typing text 's_tamezaa@globalhitss.com' into text field 'xpath=//*[@id="emailLogin"]'.</msg>
+<status status="PASS" starttime="20211013 18:32:15.373" endtime="20211013 18:32:15.594"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_email['log_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:15.595" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20211013 18:32:15.594" endtime="20211013 18:32:15.788"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:12.874" endtime="20211013 18:32:15.788"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA LOGIN-" library="common_functionalities">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:32:15.789" endtime="20211013 18:32:16.087"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:16.088" level="INFO">Typing text 'Claro123!' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20211013 18:32:16.087" endtime="20211013 18:32:16.200"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_pass['log_pass_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:16.202" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button'.</msg>
+<status status="PASS" starttime="20211013 18:32:16.200" endtime="20211013 18:32:16.353"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:15.788" endtime="20211013 18:32:16.354"/>
+</kw>
+<kw name="-CLICK IMAGEN DE PERFIL-" library="common_functionalities">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211013 18:32:27.017" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:32:26.610" endtime="20211013 18:32:27.017"/>
+</kw>
+<msg timestamp="20211013 18:32:27.018" level="FAIL">Element 'xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20211013 18:32:16.354" endtime="20211013 18:32:27.018"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211013 18:32:27.018" endtime="20211013 18:32:27.019"/>
+</kw>
+<status status="FAIL" starttime="20211013 18:32:16.354" endtime="20211013 18:32:27.019"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//i[@name='search']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20211013 18:32:27.020" endtime="20211013 18:32:27.020"/>
+</kw>
+<status status="FAIL" starttime="20211013 18:32:08.435" endtime="20211013 18:32:27.020"/>
+</kw>
+<kw name="-LOGOUT HOME CV-" library="common_functionalities">
+<status status="NOT RUN" starttime="20211013 18:32:27.021" endtime="20211013 18:32:27.021"/>
+</kw>
+<status status="FAIL" starttime="20211013 18:32:08.434" endtime="20211013 18:32:27.021">Element 'xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-s1-t4" name="CV-MX-WEB-ACCESO-VALIDAR REGISTRO CON CUENTA NUEVA">
+<kw name="-ABRIR REGISTER PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/register</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211013 18:32:27.023" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/register'.</msg>
+<status status="PASS" starttime="20211013 18:32:27.023" endtime="20211013 18:32:32.159"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:27.023" endtime="20211013 18:32:32.160"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA REGISTRO-" library="common_functionalities">
+<arg>${email_random1}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_emailtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:32:32.162" endtime="20211013 18:32:34.918"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_emailtextbox']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:34.921" level="INFO">Typing text '1_1_s_tamezaa@globalhitss.com' into text field 'xpath=//input[@id='emailRegister']'.</msg>
+<status status="PASS" starttime="20211013 18:32:34.919" endtime="20211013 18:32:35.296"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_terms_check']}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:35.300" level="INFO">Clicking element 'xpath=//span[@class='_3i1FC']'.</msg>
+<status status="PASS" starttime="20211013 18:32:35.297" endtime="20211013 18:32:35.495"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:35.498" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button'.</msg>
+<status status="PASS" starttime="20211013 18:32:35.496" endtime="20211013 18:32:35.708"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:32.161" endtime="20211013 18:32:35.709"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA REGISTRO-" library="common_functionalities">
+<arg>${pass_valido_registro}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_register_page_pass['reg_passfield']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:32:35.710" endtime="20211013 18:32:36.083"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_register_page_pass['reg_passfield']}</arg>
+<arg>${pass_valido}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:36.086" level="INFO">Typing text 'Claro123' into text field 'xpath=//input[@id='password']'.</msg>
+<status status="PASS" starttime="20211013 18:32:36.083" endtime="20211013 18:32:36.316"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_register_page_pass['reg_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:32:36.319" level="INFO">Clicking button 'xpath=//button[normalize-space()='SIGUIENTE']'.</msg>
+<status status="PASS" starttime="20211013 18:32:36.316" endtime="20211013 18:32:36.625"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//i[@name='search']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211013 18:32:36.626" endtime="20211013 18:32:44.424"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:35.709" endtime="20211013 18:32:44.425"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:27.022" endtime="20211013 18:32:44.425"/>
+</test>
+<doc>validar funcionalidades ACCESO (NA_QC)</doc>
+<status status="FAIL" starttime="20211013 18:31:33.125" endtime="20211013 18:32:44.429"/>
+</suite>
+<suite id="s1-s2" name="CV-MX-WEB-NAVEGACION" source="/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/testCases/CV-MX-WEB-NAVEGACION.robot">
+<test id="s1-s2-t1" name="CV-MX-WEB-ACCESO-VALIDAR ELEMENTOS LANDING PAGE">
+<kw name="-ABRIR LANDIND PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/landing</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211013 18:32:44.493" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/landing'.</msg>
+<status status="PASS" starttime="20211013 18:32:44.491" endtime="20211013 18:33:30.431"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:44.489" endtime="20211013 18:33:30.433"/>
+</kw>
+<kw name="-VALIDAR TEXTOS Y ELEMENTOS-" library="common_functionalities">
+<arg>${elementos_landing_anonimo}</arg>
+<arg>${textos_landing_anonimo}</arg>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{a1}</value>
+<iter>
+<var name="${element}">as_t1</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:33:30.463" endtime="20211013 18:33:30.900"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:30.461" endtime="20211013 18:33:30.900"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:33:30.933" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[2]' contains exact text '¡Todo lo que te gusta en un sólo lugar!'.</msg>
+<status status="PASS" starttime="20211013 18:33:30.913" endtime="20211013 18:33:35.556"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:30.912" endtime="20211013 18:33:35.557"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:33:37.879" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-1.png"&gt;&lt;img src="selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:33:35.570" endtime="20211013 18:33:37.879"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:35.557" endtime="20211013 18:33:37.879"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:30.449" endtime="20211013 18:33:37.879"/>
+</iter>
+<iter>
+<var name="${element}">as_t2</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:33:37.893" endtime="20211013 18:33:38.125"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:37.892" endtime="20211013 18:33:38.125"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:33:38.144" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]' contains exact text 'El mejor contenido, canales de TV, películas y series.'.</msg>
+<status status="PASS" starttime="20211013 18:33:38.126" endtime="20211013 18:33:38.342"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:38.126" endtime="20211013 18:33:38.342"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:33:38.743" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-2.png"&gt;&lt;img src="selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:33:38.343" endtime="20211013 18:33:38.744"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:38.343" endtime="20211013 18:33:38.744"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:37.891" endtime="20211013 18:33:38.744"/>
+</iter>
+<iter>
+<var name="${element}">as_reg</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:33:38.747" endtime="20211013 18:33:38.928"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:38.746" endtime="20211013 18:33:38.928"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:33:38.947" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button' contains exact text 'REGÍSTRATE'.</msg>
+<status status="PASS" starttime="20211013 18:33:38.929" endtime="20211013 18:33:39.111"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:38.929" endtime="20211013 18:33:39.112"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:33:39.560" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-3.png"&gt;&lt;img src="selenium-element-screenshot-3.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:33:39.113" endtime="20211013 18:33:39.561"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:39.112" endtime="20211013 18:33:39.561"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:38.745" endtime="20211013 18:33:39.561"/>
+</iter>
+<iter>
+<var name="${element}">as_sesion</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:33:39.565" endtime="20211013 18:33:39.797"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:39.563" endtime="20211013 18:33:39.797"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:33:39.833" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[5]/div/button' contains exact text 'INICIA SESIÓN'.</msg>
+<status status="PASS" starttime="20211013 18:33:39.799" endtime="20211013 18:33:40.015"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:39.798" endtime="20211013 18:33:40.016"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:33:40.383" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-4.png"&gt;&lt;img src="selenium-element-screenshot-4.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:33:40.028" endtime="20211013 18:33:40.384"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:40.016" endtime="20211013 18:33:40.395"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:39.562" endtime="20211013 18:33:40.395"/>
+</iter>
+<iter>
+<var name="${element}">as_gratis</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:33:40.398" endtime="20211013 18:33:40.600"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:40.397" endtime="20211013 18:33:40.600"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:33:40.633" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[6]/div/button' contains exact text 'VER GRATIS'.</msg>
+<status status="PASS" starttime="20211013 18:33:40.613" endtime="20211013 18:33:40.830"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:40.612" endtime="20211013 18:33:40.831"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:33:41.213" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-5.png"&gt;&lt;img src="selenium-element-screenshot-5.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:33:40.833" endtime="20211013 18:33:41.215"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:40.832" endtime="20211013 18:33:41.215"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:40.396" endtime="20211013 18:33:41.215"/>
+</iter>
+<status status="PASS" starttime="20211013 18:33:30.448" endtime="20211013 18:33:41.216"/>
+</for>
+<status status="PASS" starttime="20211013 18:33:30.445" endtime="20211013 18:33:41.217"/>
+</kw>
+<kw name="-CERRAR TODOS LOS NAVEGADORES-" library="common_functionalities">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211013 18:33:41.231" endtime="20211013 18:33:43.974"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:41.218" endtime="20211013 18:33:43.987"/>
+</kw>
+<status status="PASS" starttime="20211013 18:32:44.486" endtime="20211013 18:33:43.988"/>
+</test>
+<test id="s1-s2-t2" name="CV-MX-WEB-ACCESO-VALIDAR ELEMENTOS LOGIN PAGE">
+<kw name="-ABRIR LOGIN PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/login</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211013 18:33:44.008" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/login'.</msg>
+<status status="PASS" starttime="20211013 18:33:44.005" endtime="20211013 18:34:13.160"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:44.003" endtime="20211013 18:34:13.173"/>
+</kw>
+<kw name="-VALIDAR TEXTOS Y ELEMENTOS-" library="common_functionalities">
+<arg>${elementos_login_email}</arg>
+<arg>${textos_elementos_login_email}</arg>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{a1}</value>
+<iter>
+<var name="${element}">log_title</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:13.195" endtime="20211013 18:34:25.533"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:13.194" endtime="20211013 18:34:25.534"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:25.580" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[1]' contains exact text 'Inicia sesión'.</msg>
+<status status="PASS" starttime="20211013 18:34:25.536" endtime="20211013 18:34:26.822"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:25.535" endtime="20211013 18:34:26.833"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:30.277" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-6.png"&gt;&lt;img src="selenium-element-screenshot-6.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:26.834" endtime="20211013 18:34:30.277"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:26.833" endtime="20211013 18:34:30.278"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:13.193" endtime="20211013 18:34:30.278"/>
+</iter>
+<iter>
+<var name="${element}">log_correoText</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:30.292" endtime="20211013 18:34:30.591"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:30.291" endtime="20211013 18:34:30.591"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:30.640" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[2]/div[1]/span' contains exact text '¿Cuál es tu correo electrónico?'.</msg>
+<status status="PASS" starttime="20211013 18:34:30.594" endtime="20211013 18:34:30.876"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:30.592" endtime="20211013 18:34:30.876"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:31.313" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-7.png"&gt;&lt;img src="selenium-element-screenshot-7.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:30.878" endtime="20211013 18:34:31.325"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:30.877" endtime="20211013 18:34:31.325"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:30.290" endtime="20211013 18:34:31.325"/>
+</iter>
+<iter>
+<var name="${element}">reg_emailtextbox</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:31.328" endtime="20211013 18:34:31.528"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:31.326" endtime="20211013 18:34:31.528"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:31.558" level="INFO">Verifying element 'xpath=//*[@id="emailLogin"]' contains exact text ''.</msg>
+<status status="PASS" starttime="20211013 18:34:31.529" endtime="20211013 18:34:31.777"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:31.529" endtime="20211013 18:34:31.777"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:32.179" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-8.png"&gt;&lt;img src="selenium-element-screenshot-8.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:31.779" endtime="20211013 18:34:32.180"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:31.778" endtime="20211013 18:34:32.180"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:31.326" endtime="20211013 18:34:32.181"/>
+</iter>
+<iter>
+<var name="${element}">log_siguiente</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:32.194" endtime="20211013 18:34:32.812"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:32.193" endtime="20211013 18:34:32.812"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:32.860" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]/div/button' contains exact text 'SIGUIENTE'.</msg>
+<status status="PASS" starttime="20211013 18:34:32.816" endtime="20211013 18:34:33.296"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:32.814" endtime="20211013 18:34:33.296"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:34.382" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-9.png"&gt;&lt;img src="selenium-element-screenshot-9.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:33.299" endtime="20211013 18:34:34.383"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:33.297" endtime="20211013 18:34:34.383"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:32.181" endtime="20211013 18:34:34.384"/>
+</iter>
+<iter>
+<var name="${element}">log_cancelar</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:34.398" endtime="20211013 18:34:34.768"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:34.385" endtime="20211013 18:34:34.769"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:34.816" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button' contains exact text 'CANCELAR'.</msg>
+<status status="PASS" starttime="20211013 18:34:34.783" endtime="20211013 18:34:35.183"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:34.781" endtime="20211013 18:34:35.184"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:36.132" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-10.png"&gt;&lt;img src="selenium-element-screenshot-10.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:35.186" endtime="20211013 18:34:36.133"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:35.185" endtime="20211013 18:34:36.134"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:34.384" endtime="20211013 18:34:36.134"/>
+</iter>
+<iter>
+<var name="${element}">log_continuaFB</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:36.137" endtime="20211013 18:34:36.405"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:36.135" endtime="20211013 18:34:36.416"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:36.452" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[5]/div/button' contains exact text 'CONTINÚA CON FACEBOOK'.</msg>
+<status status="PASS" starttime="20211013 18:34:36.419" endtime="20211013 18:34:36.672"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:36.417" endtime="20211013 18:34:36.672"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:37.236" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-11.png"&gt;&lt;img src="selenium-element-screenshot-11.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:36.685" endtime="20211013 18:34:37.237"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:36.683" endtime="20211013 18:34:37.237"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:36.134" endtime="20211013 18:34:37.238"/>
+</iter>
+<iter>
+<var name="${element}">log_sesionAPPLE</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:37.252" endtime="20211013 18:34:37.473"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:37.240" endtime="20211013 18:34:37.473"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:37.507" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[6]/div/button' contains exact text 'INICIAR SESIÓN CON APPLE'.</msg>
+<status status="PASS" starttime="20211013 18:34:37.486" endtime="20211013 18:34:37.720"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:37.474" endtime="20211013 18:34:37.720"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:38.073" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-12.png"&gt;&lt;img src="selenium-element-screenshot-12.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:37.722" endtime="20211013 18:34:38.073"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:37.721" endtime="20211013 18:34:38.073"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:37.239" endtime="20211013 18:34:38.074"/>
+</iter>
+<iter>
+<var name="${element}">log_nuevo?</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:38.086" endtime="20211013 18:34:38.259"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:38.075" endtime="20211013 18:34:38.259"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:38.290" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[7]/span' contains exact text '¿Nuevo en Claro video? Registrate'.</msg>
+<status status="PASS" starttime="20211013 18:34:38.271" endtime="20211013 18:34:38.456"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:38.270" endtime="20211013 18:34:38.456"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:38.807" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-13.png"&gt;&lt;img src="selenium-element-screenshot-13.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:38.457" endtime="20211013 18:34:38.807"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:38.456" endtime="20211013 18:34:38.808"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:38.074" endtime="20211013 18:34:38.808"/>
+</iter>
+<iter>
+<var name="${element}">log_RegLink</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:38.821" endtime="20211013 18:34:39.006"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:38.809" endtime="20211013 18:34:39.006"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:39.024" level="INFO">Verifying element 'xpath=//*[@id="app"]/div/div[1]/div/div[2]/div/div/div[7]/span/a' contains exact text 'Registrate'.</msg>
+<status status="PASS" starttime="20211013 18:34:39.007" endtime="20211013 18:34:39.189"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:39.006" endtime="20211013 18:34:39.190"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:39.559" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-14.png"&gt;&lt;img src="selenium-element-screenshot-14.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:39.192" endtime="20211013 18:34:39.560"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:39.190" endtime="20211013 18:34:39.560"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:38.808" endtime="20211013 18:34:39.561"/>
+</iter>
+<status status="PASS" starttime="20211013 18:34:13.191" endtime="20211013 18:34:39.561"/>
+</for>
+<status status="PASS" starttime="20211013 18:34:13.175" endtime="20211013 18:34:39.574"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA LOGIN-" library="common_functionalities">
+<arg>${email_valido}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:39.577" endtime="20211013 18:34:39.773"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:34:39.793" level="INFO">Typing text 's_tamezaa@globalhitss.com' into text field 'xpath=//*[@id="emailLogin"]'.</msg>
+<status status="PASS" starttime="20211013 18:34:39.775" endtime="20211013 18:34:42.080"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_email['log_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:34:42.096" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20211013 18:34:42.081" endtime="20211013 18:34:43.751"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:39.575" endtime="20211013 18:34:43.753"/>
+</kw>
+<kw name="-VALIDAR TEXTOS Y ELEMENTOS-" library="common_functionalities">
+<arg>${elementos_login_pass}</arg>
+<arg>${textos_elementos_login_pass}</arg>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{a1}</value>
+<iter>
+<var name="${element}">log_pass_title</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:43.783" endtime="20211013 18:34:43.968"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:43.770" endtime="20211013 18:34:43.969"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:43.987" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[1]/span' contains exact text 'Inicia sesión'.</msg>
+<status status="PASS" starttime="20211013 18:34:43.970" endtime="20211013 18:34:44.136"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:43.969" endtime="20211013 18:34:44.136"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:44.468" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-15.png"&gt;&lt;img src="selenium-element-screenshot-15.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:44.137" endtime="20211013 18:34:44.469"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:44.137" endtime="20211013 18:34:44.469"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:43.768" endtime="20211013 18:34:44.469"/>
+</iter>
+<iter>
+<var name="${element}">log_pass_passText</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:44.471" endtime="20211013 18:34:44.653"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:44.470" endtime="20211013 18:34:44.654"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:44.672" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[2]/span' contains exact text 'Contraseña'.</msg>
+<status status="PASS" starttime="20211013 18:34:44.655" endtime="20211013 18:34:44.833"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:44.654" endtime="20211013 18:34:44.833"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:45.136" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-16.png"&gt;&lt;img src="selenium-element-screenshot-16.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:44.835" endtime="20211013 18:34:45.137"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:44.834" endtime="20211013 18:34:45.137"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:44.470" endtime="20211013 18:34:45.137"/>
+</iter>
+<iter>
+<var name="${element}">reg_pass_passtextbox</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:45.139" endtime="20211013 18:34:45.321"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:45.138" endtime="20211013 18:34:45.321"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:45.339" level="INFO">Verifying element 'xpath=//*[@id="password"]' contains exact text ''.</msg>
+<status status="PASS" starttime="20211013 18:34:45.322" endtime="20211013 18:34:45.488"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:45.321" endtime="20211013 18:34:45.488"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:45.837" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-17.png"&gt;&lt;img src="selenium-element-screenshot-17.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:45.489" endtime="20211013 18:34:45.838"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:45.488" endtime="20211013 18:34:45.838"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:45.138" endtime="20211013 18:34:45.838"/>
+</iter>
+<iter>
+<var name="${element}">log_pass_siguiente</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:45.840" endtime="20211013 18:34:45.987"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:45.839" endtime="20211013 18:34:45.987"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:46.006" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button' contains exact text 'SIGUIENTE'.</msg>
+<status status="PASS" starttime="20211013 18:34:45.988" endtime="20211013 18:34:46.156"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:45.988" endtime="20211013 18:34:46.157"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:46.540" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-18.png"&gt;&lt;img src="selenium-element-screenshot-18.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:46.158" endtime="20211013 18:34:46.540"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:46.157" endtime="20211013 18:34:46.540"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:45.838" endtime="20211013 18:34:46.541"/>
+</iter>
+<iter>
+<var name="${element}">log_pass_cancelar</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:46.542" endtime="20211013 18:34:46.690"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:46.541" endtime="20211013 18:34:46.690"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:46.708" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[5]/div/button' contains exact text 'CANCELAR'.</msg>
+<status status="PASS" starttime="20211013 18:34:46.691" endtime="20211013 18:34:46.858"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:46.690" endtime="20211013 18:34:46.858"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:47.210" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-19.png"&gt;&lt;img src="selenium-element-screenshot-19.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:46.860" endtime="20211013 18:34:47.210"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:46.859" endtime="20211013 18:34:47.211"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:46.541" endtime="20211013 18:34:47.222"/>
+</iter>
+<iter>
+<var name="${element}">log_pass_olvidoPass</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:47.225" endtime="20211013 18:34:47.407"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:47.223" endtime="20211013 18:34:47.407"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:34:47.442" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[6]/div/button' contains exact text '¿OLVIDASTE TU CONTRASEÑA?'.</msg>
+<status status="PASS" starttime="20211013 18:34:47.409" endtime="20211013 18:34:47.594"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:47.408" endtime="20211013 18:34:47.594"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:34:47.943" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-20.png"&gt;&lt;img src="selenium-element-screenshot-20.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:34:47.606" endtime="20211013 18:34:47.943"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:47.595" endtime="20211013 18:34:47.944"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:47.222" endtime="20211013 18:34:47.944"/>
+</iter>
+<status status="PASS" starttime="20211013 18:34:43.768" endtime="20211013 18:34:47.944"/>
+</for>
+<status status="PASS" starttime="20211013 18:34:43.764" endtime="20211013 18:34:47.945"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA LOGIN-" library="common_functionalities">
+<arg>${pass_valido}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:34:47.958" endtime="20211013 18:34:48.091"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:34:48.095" level="INFO">Typing text 'Claro123!' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20211013 18:34:48.091" endtime="20211013 18:34:48.976"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_pass['log_pass_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:34:48.992" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button'.</msg>
+<status status="PASS" starttime="20211013 18:34:48.977" endtime="20211013 18:34:49.999"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:47.945" endtime="20211013 18:34:49.999"/>
+</kw>
+<kw name="-CERRAR TODOS LOS NAVEGADORES-" library="common_functionalities">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211013 18:34:50.012" endtime="20211013 18:34:50.913"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:50.000" endtime="20211013 18:34:50.914"/>
+</kw>
+<status status="PASS" starttime="20211013 18:33:43.990" endtime="20211013 18:34:50.915"/>
+</test>
+<test id="s1-s2-t3" name="CV-MX-WEB-ACCESO-VALIDAR ELEMENTOS REGISTER PAGE">
+<kw name="-ABRIR REGISTER PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/register</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211013 18:34:50.947" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/register'.</msg>
+<status status="PASS" starttime="20211013 18:34:50.935" endtime="20211013 18:35:26.483"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:50.933" endtime="20211013 18:35:26.484"/>
+</kw>
+<kw name="-VALIDAR TEXTOS Y ELEMENTOS-" library="common_functionalities">
+<arg>${elementos_register_page}</arg>
+<arg>${textos_register_page}</arg>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{a1}</value>
+<iter>
+<var name="${element}">reg_registrate</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:26.501" endtime="20211013 18:35:26.632"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:26.500" endtime="20211013 18:35:26.632"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:26.652" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[1]' contains exact text 'Regístrate'.</msg>
+<status status="PASS" starttime="20211013 18:35:26.634" endtime="20211013 18:35:26.735"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:26.633" endtime="20211013 18:35:26.735"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:28.387" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-21.png"&gt;&lt;img src="selenium-element-screenshot-21.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:26.736" endtime="20211013 18:35:28.388"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:26.735" endtime="20211013 18:35:28.388"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:26.499" endtime="20211013 18:35:28.388"/>
+</iter>
+<iter>
+<var name="${element}">reg_cualemail?</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:28.401" endtime="20211013 18:35:29.029"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:28.400" endtime="20211013 18:35:29.030"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:29.038" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[2]/div[1]' contains exact text '¿Cuál es tu correo electrónico?'.</msg>
+<status status="PASS" starttime="20211013 18:35:29.031" endtime="20211013 18:35:29.152"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:29.030" endtime="20211013 18:35:29.152"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:29.347" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-22.png"&gt;&lt;img src="selenium-element-screenshot-22.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:29.154" endtime="20211013 18:35:29.347"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:29.153" endtime="20211013 18:35:29.347"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:28.389" endtime="20211013 18:35:29.347"/>
+</iter>
+<iter>
+<var name="${element}">reg_emailtextbox</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:29.349" endtime="20211013 18:35:29.432"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:29.348" endtime="20211013 18:35:29.433"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:29.439" level="INFO">Verifying element 'xpath=//input[@id='emailRegister']' contains exact text ''.</msg>
+<status status="PASS" starttime="20211013 18:35:29.434" endtime="20211013 18:35:29.503"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:29.433" endtime="20211013 18:35:29.504"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:29.732" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-23.png"&gt;&lt;img src="selenium-element-screenshot-23.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:29.515" endtime="20211013 18:35:29.743"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:29.514" endtime="20211013 18:35:29.744"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:29.348" endtime="20211013 18:35:29.744"/>
+</iter>
+<iter>
+<var name="${element}">reg_terms</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:29.746" endtime="20211013 18:35:29.832"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:29.745" endtime="20211013 18:35:29.832"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:29.839" level="INFO">Verifying element 'xpath=//*[@class='_1pakn']//span[contains(text(),'Acepto los')]' contains exact text 'Acepto los Términos y Condiciones del servicio.'.</msg>
+<status status="PASS" starttime="20211013 18:35:29.834" endtime="20211013 18:35:29.917"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:29.833" endtime="20211013 18:35:29.917"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:30.087" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-24.png"&gt;&lt;img src="selenium-element-screenshot-24.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:29.919" endtime="20211013 18:35:30.087"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:29.918" endtime="20211013 18:35:30.088"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:29.744" endtime="20211013 18:35:30.088"/>
+</iter>
+<iter>
+<var name="${element}">reg_terms_check</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:30.090" endtime="20211013 18:35:30.172"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.089" endtime="20211013 18:35:30.172"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:30.179" level="INFO">Verifying element 'xpath=//span[@class='_3i1FC']' contains exact text ''.</msg>
+<status status="PASS" starttime="20211013 18:35:30.173" endtime="20211013 18:35:30.243"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.173" endtime="20211013 18:35:30.244"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:30.387" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-25.png"&gt;&lt;img src="selenium-element-screenshot-25.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:30.245" endtime="20211013 18:35:30.388"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.244" endtime="20211013 18:35:30.388"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.089" endtime="20211013 18:35:30.388"/>
+</iter>
+<iter>
+<var name="${element}">reg_terms_link</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:30.390" endtime="20211013 18:35:30.473"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.389" endtime="20211013 18:35:30.473"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:30.490" level="INFO">Verifying element 'xpath=//a[normalize-space()='Términos y Condiciones']' contains exact text 'Términos y Condiciones'.</msg>
+<status status="PASS" starttime="20211013 18:35:30.474" endtime="20211013 18:35:30.555"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.474" endtime="20211013 18:35:30.555"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:30.716" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-26.png"&gt;&lt;img src="selenium-element-screenshot-26.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:30.556" endtime="20211013 18:35:30.716"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.556" endtime="20211013 18:35:30.717"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.389" endtime="20211013 18:35:30.717"/>
+</iter>
+<iter>
+<var name="${element}">reg_siguiente</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:30.718" endtime="20211013 18:35:30.801"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.718" endtime="20211013 18:35:30.802"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:30.808" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button' contains exact text 'SIGUIENTE'.</msg>
+<status status="PASS" starttime="20211013 18:35:30.803" endtime="20211013 18:35:30.872"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.802" endtime="20211013 18:35:30.872"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:31.019" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-27.png"&gt;&lt;img src="selenium-element-screenshot-27.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:30.874" endtime="20211013 18:35:31.020"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.873" endtime="20211013 18:35:31.020"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:30.717" endtime="20211013 18:35:31.030"/>
+</iter>
+<iter>
+<var name="${element}">reg_cancelar</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:31.033" endtime="20211013 18:35:31.116"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.032" endtime="20211013 18:35:31.117"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:31.123" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[5]/div/button' contains exact text 'CANCELAR'.</msg>
+<status status="PASS" starttime="20211013 18:35:31.118" endtime="20211013 18:35:31.187"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.117" endtime="20211013 18:35:31.188"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:31.357" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-28.png"&gt;&lt;img src="selenium-element-screenshot-28.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:31.189" endtime="20211013 18:35:31.358"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.188" endtime="20211013 18:35:31.358"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.031" endtime="20211013 18:35:31.358"/>
+</iter>
+<iter>
+<var name="${element}">reg_telmex?</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:31.359" endtime="20211013 18:35:31.452"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.359" endtime="20211013 18:35:31.453"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:31.459" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[6]/span' contains exact text '¿Tienes Telmex o Telcel?
+Conoce las promociones'.</msg>
+<status status="PASS" starttime="20211013 18:35:31.454" endtime="20211013 18:35:31.525"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.453" endtime="20211013 18:35:31.525"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:31.677" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-29.png"&gt;&lt;img src="selenium-element-screenshot-29.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:31.526" endtime="20211013 18:35:31.678"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.526" endtime="20211013 18:35:31.678"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.358" endtime="20211013 18:35:31.678"/>
+</iter>
+<iter>
+<var name="${element}">reg_terms_promo</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:31.679" endtime="20211013 18:35:31.757"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.679" endtime="20211013 18:35:31.757"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:31.764" level="INFO">Verifying element 'xpath=//*[@id="app"]/div/div[1]/div/div[2]/div/div/div[6]/span/a' contains exact text 'Conoce las promociones'.</msg>
+<status status="PASS" starttime="20211013 18:35:31.759" endtime="20211013 18:35:31.826"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.758" endtime="20211013 18:35:31.826"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:31.973" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-30.png"&gt;&lt;img src="selenium-element-screenshot-30.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:31.827" endtime="20211013 18:35:31.973"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.827" endtime="20211013 18:35:31.973"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.678" endtime="20211013 18:35:31.974"/>
+</iter>
+<iter>
+<var name="${element}">reg_tienescuenta?</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:31.975" endtime="20211013 18:35:32.053"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.975" endtime="20211013 18:35:32.054"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:32.060" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[7]/span' contains exact text '¿Ya tienes cuenta? Inicia sesión'.</msg>
+<status status="PASS" starttime="20211013 18:35:32.055" endtime="20211013 18:35:32.123"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:32.054" endtime="20211013 18:35:32.123"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:32.273" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-31.png"&gt;&lt;img src="selenium-element-screenshot-31.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:32.124" endtime="20211013 18:35:32.274"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:32.124" endtime="20211013 18:35:32.274"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:31.974" endtime="20211013 18:35:32.274"/>
+</iter>
+<iter>
+<var name="${element}">reg_sesion</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:32.276" endtime="20211013 18:35:32.354"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:32.275" endtime="20211013 18:35:32.354"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:32.360" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[7]/span/a' contains exact text 'Inicia sesión'.</msg>
+<status status="PASS" starttime="20211013 18:35:32.355" endtime="20211013 18:35:32.421"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:32.354" endtime="20211013 18:35:32.422"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:32.547" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-32.png"&gt;&lt;img src="selenium-element-screenshot-32.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:32.423" endtime="20211013 18:35:32.547"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:32.422" endtime="20211013 18:35:32.547"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:32.274" endtime="20211013 18:35:32.547"/>
+</iter>
+<status status="PASS" starttime="20211013 18:35:26.498" endtime="20211013 18:35:32.547"/>
+</for>
+<status status="PASS" starttime="20211013 18:35:26.485" endtime="20211013 18:35:32.548"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA REGISTRO-" library="common_functionalities">
+<arg>${email_random}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_emailtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:32.550" endtime="20211013 18:35:32.610"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_emailtextbox']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:35:32.622" level="INFO">Typing text '1_0_s_tamezaa@globalhitss.com' into text field 'xpath=//input[@id='emailRegister']'.</msg>
+<status status="PASS" starttime="20211013 18:35:32.611" endtime="20211013 18:35:33.357"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_terms_check']}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211013 18:35:33.360" level="INFO">Clicking element 'xpath=//span[@class='_3i1FC']'.</msg>
+<status status="PASS" starttime="20211013 18:35:33.357" endtime="20211013 18:35:33.700"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_register_page['reg_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:35:33.704" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button'.</msg>
+<status status="PASS" starttime="20211013 18:35:33.700" endtime="20211013 18:35:34.066"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:32.548" endtime="20211013 18:35:34.067"/>
+</kw>
+<kw name="-VALIDAR TEXTOS Y ELEMENTOS-" library="common_functionalities">
+<arg>${elementos_register_page_pass}</arg>
+<arg>${textos_elementos_register_page_pass}</arg>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{a1}</value>
+<iter>
+<var name="${element}">reg_registrate</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:34.073" endtime="20211013 18:35:34.151"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:34.072" endtime="20211013 18:35:34.152"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:34.159" level="INFO">Verifying element 'xpath=//span[normalize-space()='Regístrate']' contains exact text 'Regístrate'.</msg>
+<status status="PASS" starttime="20211013 18:35:34.154" endtime="20211013 18:35:34.219"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:34.152" endtime="20211013 18:35:34.219"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:34.520" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-33.png"&gt;&lt;img src="selenium-element-screenshot-33.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:34.220" endtime="20211013 18:35:34.520"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:34.219" endtime="20211013 18:35:34.521"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:34.072" endtime="20211013 18:35:34.521"/>
+</iter>
+<iter>
+<var name="${element}">reg_passtext?</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:34.523" endtime="20211013 18:35:34.602"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:34.522" endtime="20211013 18:35:34.602"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:34.609" level="INFO">Verifying element 'xpath=//span[normalize-space()='Elige una contraseña.']' contains exact text 'Elige una contraseña.'.</msg>
+<status status="PASS" starttime="20211013 18:35:34.603" endtime="20211013 18:35:34.669"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:34.603" endtime="20211013 18:35:34.669"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:34.857" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-34.png"&gt;&lt;img src="selenium-element-screenshot-34.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:34.670" endtime="20211013 18:35:34.857"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:34.669" endtime="20211013 18:35:34.857"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:34.522" endtime="20211013 18:35:34.857"/>
+</iter>
+<iter>
+<var name="${element}">reg_passfield</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:34.859" endtime="20211013 18:35:34.939"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:34.858" endtime="20211013 18:35:34.939"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:34.945" level="INFO">Verifying element 'xpath=//input[@id='password']' contains exact text ''.</msg>
+<status status="PASS" starttime="20211013 18:35:34.940" endtime="20211013 18:35:35.003"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:34.939" endtime="20211013 18:35:35.003"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:35.131" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-35.png"&gt;&lt;img src="selenium-element-screenshot-35.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:35.004" endtime="20211013 18:35:35.132"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:35.004" endtime="20211013 18:35:35.132"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:34.858" endtime="20211013 18:35:35.132"/>
+</iter>
+<iter>
+<var name="${element}">reg_siguiente</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:35.141" endtime="20211013 18:35:35.209"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:35.133" endtime="20211013 18:35:35.209"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:35.216" level="INFO">Verifying element 'xpath=//button[normalize-space()='SIGUIENTE']' contains exact text 'SIGUIENTE'.</msg>
+<status status="PASS" starttime="20211013 18:35:35.210" endtime="20211013 18:35:35.274"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:35.210" endtime="20211013 18:35:35.274"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:35.463" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-36.png"&gt;&lt;img src="selenium-element-screenshot-36.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:35.275" endtime="20211013 18:35:35.463"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:35.274" endtime="20211013 18:35:35.464"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:35.133" endtime="20211013 18:35:35.464"/>
+</iter>
+<iter>
+<var name="${element}">reg_cancelar</var>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:35.473" endtime="20211013 18:35:35.545"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:35.472" endtime="20211013 18:35:35.545"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211013 18:35:35.551" level="INFO">Verifying element 'xpath=//button[normalize-space()='CANCELAR']' contains exact text 'CANCELAR'.</msg>
+<status status="PASS" starttime="20211013 18:35:35.546" endtime="20211013 18:35:35.605"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:35.545" endtime="20211013 18:35:35.605"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>capture element screenshot</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20211013 18:35:35.732" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-37.png"&gt;&lt;img src="selenium-element-screenshot-37.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211013 18:35:35.607" endtime="20211013 18:35:35.733"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:35.606" endtime="20211013 18:35:35.733"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:35.471" endtime="20211013 18:35:35.733"/>
+</iter>
+<status status="PASS" starttime="20211013 18:35:34.071" endtime="20211013 18:35:35.733"/>
+</for>
+<status status="PASS" starttime="20211013 18:35:34.068" endtime="20211013 18:35:35.734"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA REGISTRO-" library="common_functionalities">
+<arg>${pass_valido_registro}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_register_page_pass['reg_passfield']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211013 18:35:35.738" endtime="20211013 18:35:35.789"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_register_page_pass['reg_passfield']}</arg>
+<arg>${pass_valido}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211013 18:35:35.792" level="INFO">Typing text 'Claro123' into text field 'xpath=//input[@id='password']'.</msg>
+<status status="PASS" starttime="20211013 18:35:35.789" endtime="20211013 18:35:36.111"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_register_page_pass['reg_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211013 18:35:36.115" level="INFO">Clicking button 'xpath=//button[normalize-space()='SIGUIENTE']'.</msg>
+<status status="PASS" starttime="20211013 18:35:36.112" endtime="20211013 18:35:36.519"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//i[@name='search']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211013 18:35:36.519" endtime="20211013 18:35:42.691"/>
+</kw>
+<status status="PASS" starttime="20211013 18:35:35.735" endtime="20211013 18:35:42.691"/>
+</kw>
+<status status="PASS" starttime="20211013 18:34:50.929" endtime="20211013 18:35:42.692"/>
+</test>
+<doc>validar funcionalidades NAVEGACION (NA_QC)</doc>
+<status status="PASS" starttime="20211013 18:32:44.435" endtime="20211013 18:35:42.694"/>
+</suite>
+<status status="FAIL" starttime="20211013 18:31:33.102" endtime="20211013 18:35:42.699"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="2" skip="0" id="s1" name="CV-MX-WEB-ACCESO &amp; CV-MX-WEB-NAVEGACION">CV-MX-WEB-ACCESO &amp; CV-MX-WEB-NAVEGACION</stat>
+<stat pass="2" fail="2" skip="0" id="s1-s1" name="CV-MX-WEB-ACCESO">CV-MX-WEB-ACCESO &amp; CV-MX-WEB-NAVEGACION.CV-MX-WEB-ACCESO</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s2" name="CV-MX-WEB-NAVEGACION">CV-MX-WEB-ACCESO &amp; CV-MX-WEB-NAVEGACION.CV-MX-WEB-NAVEGACION</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -12,7 +12,7 @@ ${pass_valido}    Claro123!
 ${pass_valido_registro}    Claro123
 ${pass_novalido}    Claro123
 ${email_random}        2_0_s_tamezaa@globalhitss.com
-${email_random1}        2_1_s_tamezaa@globalhitss.com
+${email_random1}       3_1_s_tamezaa@globalhitss.com
 *** Settings ***
 Variables      ${path_cv-pom}/loginPage/elementos_login_email.py
 Variables      ${path_cv-pom}/loginPage/textos_elementos_login_email.py
