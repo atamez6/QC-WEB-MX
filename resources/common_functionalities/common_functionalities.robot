@@ -4,6 +4,7 @@ Library        OperatingSystem
 Library        Process
 Library        Collections
 #Library        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/charles_proxy/charles_library.py
+Library        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/common_functionalities/email_random.py
 Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/common_functionalities/variables.robot
 #Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/common_functionalities/special_functionalities.robot
 
@@ -68,9 +69,9 @@ Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resourc
     click button                     ${elementos_login_pass['log_pass_siguiente']}
 
 -INGRESAR EMAIL PARA REGISTRO-
-  [Arguments]                        ${email}
+  [Arguments]                        ${EMAIL_RANDOM}
    wait until element is visible     ${elementos_register_page['reg_emailtextbox']}
-   input text                        ${elementos_register_page['reg_emailtextbox']}       ${email}
+   input text                        ${elementos_register_page['reg_emailtextbox']}       ${EMAIL_RANDOM}
    click element                      ${elementos_register_page['reg_terms_check']}
    click button                      ${elementos_register_page['reg_siguiente']}
 
@@ -121,6 +122,8 @@ Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resourc
      capture page screenshot
     -CERRAR NAVEGADOR-
 
+-EMAIL_RANDOM
+    ${EMAIL_RANDOM}=    email_random
 
 -VALIDAR TEXTOS Y ELEMENTOS-
   [Arguments]    ${a1}    ${a2}
