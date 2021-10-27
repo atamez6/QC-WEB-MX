@@ -1,7 +1,7 @@
 import random
 import string
 	
-def email_random():
+def email_random_python():
 	alphabet_list = list(string.ascii_lowercase)
 	var1 = list(string.digits)
 	var2 = ['_','+']

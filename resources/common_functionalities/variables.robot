@@ -11,6 +11,8 @@ ${email_novalido}     ss_tamezaa@globalhitss.com
 ${pass_valido}    Claro123!
 ${pass_valido_registro}    Claro123
 ${pass_novalido}    Claro123
+${email_gratis}    abc0000000000000023@gmail.com
+${pass_gratis}    Claro123
 
 *** Settings ***
 Variables      ${path_cv-pom}/loginPage/elementos_login_email.py

@@ -1,5 +1,5 @@
 *** Settings ***
-Library        SeleniumLibrary     implicit_wait=10s
+Library        SeleniumLibrary     implicit_wait=15s
 Library        OperatingSystem
 Library        Process
 Library        Collections
@@ -123,7 +123,7 @@ Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resourc
     -CERRAR NAVEGADOR-
 
 -EMAIL_RANDOM
-    ${EMAIL_RANDOM}=    email_random
+    ${EMAIL_RANDOM}=    email_random_python
 
 -VALIDAR TEXTOS Y ELEMENTOS-
   [Arguments]    ${a1}    ${a2}
@@ -134,7 +134,97 @@ Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resourc
 
    END
 
+-CLICK NODO CATALOGO-
+  wait until page contains element    ${elementos_home_page['home_nodo_catalogo']}
+  click element   ${elementos_home_page['home_nodo_catalogo']}
 
+-CLICK SUBNODO PARAMOUNT-
+  scroll element into view    ${elementos_nodo_catalogo_page['catalogo_subnodo_paramount']}
+  wait until page contains element    ${elementos_nodo_catalogo_page['catalogo_subnodo_paramount']}
+  click element   ${elementos_nodo_catalogo_page['catalogo_subnodo_paramount']}
+
+-CLICK SUBNODO PELICULAS-
+  scroll element into view    ${elementos_nodo_catalogo_page['catalogo_subnodo_peliculas']}
+  wait until page contains element    ${elementos_nodo_catalogo_page['catalogo_subnodo_peliculas']}
+  click element   ${elementos_nodo_catalogo_page['catalogo_subnodo_peliculas']}
+
+-CLICK SUBNODO SERIES-
+  scroll element into view    ${elementos_nodo_catalogo_page['catalogo_subnodo_series']}
+  wait until page contains element    ${elementos_nodo_catalogo_page['catalogo_subnodo_series']}
+  click element   ${elementos_nodo_catalogo_page['catalogo_subnodo_series']}
+
+-CLICK TICKER PLAN SELECTOR-
+  wait until page contains element    ${elementos_home_page['home_ticker']}
+  click element   ${elementos_home_page['home_ticker']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE CLARO VIDEO MENSUAL-
+  scroll element into view    ${elementos_plan_selector_page['claro_mensual_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['claro_mensual_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['claro_mensual_btn_incluye?']}
+
+
+-BACK-
+   go back
+
+-CLICK PLAN SELECTOR QUE INCLUYE CLARO VIDEO ANUAL-
+  scroll element into view    ${elementos_plan_selector_page['claro_anual_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['claro_anual_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['claro_anual_btn_incluye?']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE FOX-
+  scroll element into view    ${elementos_plan_selector_page['fox_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['fox_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['fox_btn_incluye?']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE NOGGIN-
+  scroll element into view    ${elementos_plan_selector_page['noggin_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['noggin_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['noggin_btn_incluye?']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE EDYE-
+  scroll element into view    ${elementos_plan_selector_page['edye_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['edye_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['edye_btn_incluye?']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE PICARDIA-
+  scroll element into view    ${elementos_plan_selector_page['picardia_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['picardia_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['picardia_btn_incluye?']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE KARAOKE-
+  scroll element into view    ${elementos_plan_selector_page['karaoke_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['karaoke_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['karaoke_btn_incluye?']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE QELLO-
+  scroll element into view    ${elementos_plan_selector_page['qello_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['qello_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['qello_btn_incluye?']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE ATRES-
+  scroll element into view    ${elementos_plan_selector_page['atres_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['atres_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['atres_btn_incluye?']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE HBO-
+  scroll element into view    ${elementos_plan_selector_page['hbo_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['hbo_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['hbo_btn_incluye?']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE INDYCAR-
+  scroll element into view    ${elementos_plan_selector_page['indycar_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['indycar_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['indycar_btn_incluye?']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE STARZPLAY-
+  scroll element into view    ${elementos_plan_selector_page['starzplay_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['starzplay_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['starzplay_btn_incluye?']}
+
+-CLICK PLAN SELECTOR QUE INCLUYE RTVE-
+  scroll element into view    ${elementos_plan_selector_page['rtve_btn_incluye?']}
+  wait until page contains element    ${elementos_plan_selector_page['rtve_btn_incluye?']}
+  click element   ${elementos_plan_selector_page['rtve_btn_incluye?']}
 
 
 
