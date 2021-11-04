@@ -4,7 +4,7 @@ Library        OperatingSystem
 Library        Process
 Library        Collections
 #Library        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/charles_proxy/charles_library.py
-Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/common_functionalities/variables.robot
+Resource       /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/common_functionalities/variables.robot
 
 *** Keywords ***
 -IR A POLITICAS DE PRIVACIDAD-

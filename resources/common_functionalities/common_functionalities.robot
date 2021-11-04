@@ -4,8 +4,8 @@ Library        OperatingSystem
 Library        Process
 Library        Collections
 #Library        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/charles_proxy/charles_library.py
-Library        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/common_functionalities/email_random.py
-Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/common_functionalities/variables.robot
+Library         /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/common_functionalities/email_random.py
+Resource       /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/common_functionalities/variables.robot
 #Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/common_functionalities/special_functionalities.robot
 
 
@@ -128,9 +128,10 @@ Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resourc
 -VALIDAR TEXTOS Y ELEMENTOS-
   [Arguments]    ${a1}    ${a2}
    FOR  ${element}   IN   @{a1}
+      scroll element into view    ${a1['${element}']}
       Run Keyword And Continue On Failure   Wait Until Element is Visible      ${a1['${element}']}
       Run Keyword And Continue On Failure   element text should be      ${a1['${element}']}    ${a2['${element}']}
-      Run Keyword And Continue On Failure   capture element screenshot    ${a1['${element}']}
+      #Run Keyword And Continue On Failure   capture element screenshot    ${a1['${element}']}
 
    END
 
