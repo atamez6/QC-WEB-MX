@@ -3,9 +3,9 @@ Library        SeleniumLibrary     implicit_wait=15s
 Library        OperatingSystem
 Library        Process
 Library        Collections
-#Library        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/charles_proxy/charles_library.py
-Library         /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/common_functionalities/email_random.py
-Resource       /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/common_functionalities/variables.robot
+Library        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/charles_proxy/charles_library.py
+Library          /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/common_functionalities/email_random.py
+Resource        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/common_functionalities/variables.robot
 #Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/common_functionalities/special_functionalities.robot
 
 
@@ -100,11 +100,15 @@ Resource       /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/common_functional
 
 -ABRIR CHARLES-
     start_charles_proxy_in_headless_mode
+    Sleep   5
     start_charles_proxy_session_recording
 
 -TERMINAR CHARLES-
-    stop_charles_proxy_session_recording
     download_charles_proxy_session_recording
+    stop_charles_proxy_session_recording
+
+    #convert_recorded_session_file
+    Sleep   8
     terminate_all_charles_proxy_sessions
 
 -CONFIGURACIÓN INICIAL SUITETEST-

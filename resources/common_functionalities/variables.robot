@@ -3,9 +3,9 @@ ${browser}          chrome
 ${browser-chrome}   chrome
 ${browser-firefox}  firefox
 ${browser-safari}   safari
-${screenshots-folder}       /Users/neyraa/Desktop/QC-py/QC-WEB-MX/Resultados/screenshots
-${textos_payment}    /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/CV-POM/paymentPage/textosPayment
-${path_cv-pom}      /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/CV-POM
+${screenshots-folder}        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/Resultados/screenshots
+${textos_payment}     /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/CV-POM/paymentPage/textosPayment
+${path_cv-pom}       /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/CV-POM
 ${email_valido}    s_tamezaa@globalhitss.com
 ${email_novalido}     ss_tamezaa@globalhitss.com
 ${pass_valido}    Claro123!
@@ -31,6 +31,6 @@ Variables      ${path_cv-pom}/conocelaspromocionesPage/elementos_conocePromos.py
 Variables      ${path_cv-pom}/registerPage/elementos-registerPage.py
 Variables      ${path_cv-pom}/registerPage/textos-elementos-registerPage.py
 Variables      ${path_cv-pom}/terminosyCondicionesPage/elementos_terminosycondiciones.py
-Variables       /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/CV-POM/registerPage/textos-elementos-registerPage-pass.py
-Variables       /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/CV-POM/registerPage/elementos-registerPage-pass.py
-Library        /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/common_functionalities/email_random.py
+Variables        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/CV-POM/registerPage/textos-elementos-registerPage-pass.py
+Variables        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/CV-POM/registerPage/elementos-registerPage-pass.py
+Library         /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/common_functionalities/email_random.py

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.7 on darwin)" generated="20211124 20:00:50.759" rpa="false" schemaversion="2">
+<suite id="s1" name="Tester" source="/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/testCases/tester.robot">
+<kw name="-CONFIGURACIÓN INICIAL SUITETEST-" library="common_functionalities" type="SETUP">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20211124 20:00:51.127" endtime="20211124 20:00:51.127"/>
+</kw>
+<status status="PASS" starttime="20211124 20:00:51.127" endtime="20211124 20:00:51.127"/>
+</kw>
+<test id="s1-t1" name="CV-MX-WEB-ACCESO-VALIDAR ELEMENTOS LANDING PAGE">
+<kw name="-ABRIR CHARLES-" library="common_functionalities">
+<kw name="Start Charles Proxy In Headless Mode" library="charles_library">
+<status status="PASS" starttime="20211124 20:00:51.128" endtime="20211124 20:00:55.135"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211124 20:01:00.138" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211124 20:00:55.135" endtime="20211124 20:01:00.138"/>
+</kw>
+<kw name="Start Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:01:00.139" endtime="20211124 20:01:00.172"/>
+</kw>
+<status status="PASS" starttime="20211124 20:00:51.128" endtime="20211124 20:01:00.172"/>
+</kw>
+<kw name="-ABRIR LANDIND PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/landing</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211124 20:01:00.173" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/landing'.</msg>
+<status status="PASS" starttime="20211124 20:01:00.172" endtime="20211124 20:01:33.719"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:00.172" endtime="20211124 20:01:33.719"/>
+</kw>
+<kw name="-VALIDAR TEXTOS Y ELEMENTOS-" library="common_functionalities">
+<arg>${elementos_landing_anonimo}</arg>
+<arg>${textos_landing_anonimo}</arg>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{a1}</value>
+<iter>
+<var name="${element}">as_t1</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211124 20:01:33.722" endtime="20211124 20:01:33.997"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211124 20:01:33.998" endtime="20211124 20:01:34.016"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:33.998" endtime="20211124 20:01:34.016"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211124 20:01:34.018" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[2]' contains exact text '¡Todo lo que te gusta en un sólo lugar!'.</msg>
+<status status="PASS" starttime="20211124 20:01:34.016" endtime="20211124 20:01:34.034"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:34.016" endtime="20211124 20:01:34.034"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:33.721" endtime="20211124 20:01:34.034"/>
+</iter>
+<iter>
+<var name="${element}">as_t2</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211124 20:01:34.034" endtime="20211124 20:01:34.301"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211124 20:01:34.301" endtime="20211124 20:01:34.317"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:34.301" endtime="20211124 20:01:34.317"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211124 20:01:34.320" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]' contains exact text 'El mejor contenido, canales de TV, películas y series.'.</msg>
+<status status="PASS" starttime="20211124 20:01:34.318" endtime="20211124 20:01:34.335"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:34.317" endtime="20211124 20:01:34.335"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:34.034" endtime="20211124 20:01:34.335"/>
+</iter>
+<iter>
+<var name="${element}">as_reg</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211124 20:01:34.335" endtime="20211124 20:01:34.629"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211124 20:01:34.630" endtime="20211124 20:01:34.652"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:34.629" endtime="20211124 20:01:34.652"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211124 20:01:34.656" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button' contains exact text 'REGÍSTRATE'.</msg>
+<status status="PASS" starttime="20211124 20:01:34.653" endtime="20211124 20:01:34.683"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:34.653" endtime="20211124 20:01:34.683"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:34.335" endtime="20211124 20:01:34.683"/>
+</iter>
+<iter>
+<var name="${element}">as_sesion</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211124 20:01:34.683" endtime="20211124 20:01:34.952"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211124 20:01:34.953" endtime="20211124 20:01:34.970"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:34.952" endtime="20211124 20:01:34.970"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211124 20:01:34.973" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[5]/div/button' contains exact text 'INICIA SESIÓN'.</msg>
+<status status="PASS" starttime="20211124 20:01:34.971" endtime="20211124 20:01:34.989"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:34.971" endtime="20211124 20:01:34.989"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:34.683" endtime="20211124 20:01:34.989"/>
+</iter>
+<iter>
+<var name="${element}">as_gratis</var>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211124 20:01:34.989" endtime="20211124 20:01:35.256"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Wait Until Element is Visible</arg>
+<arg>${a1['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211124 20:01:35.256" endtime="20211124 20:01:35.270"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:35.256" endtime="20211124 20:01:35.271"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>element text should be</arg>
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${a1['${element}']}</arg>
+<arg>${a2['${element}']}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20211124 20:01:35.273" level="INFO">Verifying element 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[6]/div/button' contains exact text 'VER GRATIS'.</msg>
+<status status="PASS" starttime="20211124 20:01:35.271" endtime="20211124 20:01:35.288"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:35.271" endtime="20211124 20:01:35.288"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:34.989" endtime="20211124 20:01:35.288"/>
+</iter>
+<status status="PASS" starttime="20211124 20:01:33.721" endtime="20211124 20:01:35.288"/>
+</for>
+<status status="PASS" starttime="20211124 20:01:33.720" endtime="20211124 20:01:35.288"/>
+</kw>
+<kw name="-CERRAR TODOS LOS NAVEGADORES-" library="common_functionalities">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211124 20:01:35.289" endtime="20211124 20:01:35.399"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:35.288" endtime="20211124 20:01:35.399"/>
+</kw>
+<kw name="-TERMINAR CHARLES-" library="common_functionalities">
+<kw name="Download Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:01:35.400" endtime="20211124 20:01:35.655"/>
+</kw>
+<kw name="Stop Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:01:35.655" endtime="20211124 20:01:35.668"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211124 20:01:43.669" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211124 20:01:35.668" endtime="20211124 20:01:43.670"/>
+</kw>
+<kw name="Terminate All Charles Proxy Sessions" library="charles_library">
+<status status="PASS" starttime="20211124 20:01:43.670" endtime="20211124 20:01:43.876"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:35.400" endtime="20211124 20:01:43.876"/>
+</kw>
+<status status="PASS" starttime="20211124 20:00:51.128" endtime="20211124 20:01:43.877"/>
+</test>
+<kw name="-TERMINAR CONFIGURACIÓN SUITETEST-" library="common_functionalities" type="TEARDOWN">
+<kw name="-CERRAR TODOS LOS NAVEGADORES-" library="common_functionalities">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211124 20:01:43.878" endtime="20211124 20:01:43.878"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:43.878" endtime="20211124 20:01:43.878"/>
+</kw>
+<status status="PASS" starttime="20211124 20:01:43.877" endtime="20211124 20:01:43.878"/>
+</kw>
+<doc>validar funcionalidades ACCESO (NA_QC)</doc>
+<status status="PASS" starttime="20211124 20:00:50.760" endtime="20211124 20:01:43.878"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tester">Tester</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

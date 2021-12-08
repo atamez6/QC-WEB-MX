@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.7 on darwin)" generated="20211124 20:33:03.668" rpa="false" schemaversion="2">
+<suite id="s1" name="CV-MX-WEB-ACCESO" source="/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/testCases/CV-MX-WEB-ACCESO.robot">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn" type="SETUP">
+<arg>-CONFIGURACIÓN INICIAL SUITETEST-</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="-CONFIGURACIÓN INICIAL SUITETEST-" library="common_functionalities">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20211124 20:33:04.026" endtime="20211124 20:33:04.026"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:04.026" endtime="20211124 20:33:04.027"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:04.026" endtime="20211124 20:33:04.027"/>
+</kw>
+<test id="s1-t1" name="CV-MX-WEB-ACCESO-VALIDAR LOGIN CON USUARIO CORRECTO">
+<kw name="-ABRIR CHARLES-" library="common_functionalities" type="SETUP">
+<kw name="Start Charles Proxy In Headless Mode" library="charles_library">
+<status status="PASS" starttime="20211124 20:33:04.028" endtime="20211124 20:33:08.036"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211124 20:33:13.039" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211124 20:33:08.036" endtime="20211124 20:33:13.039"/>
+</kw>
+<kw name="Start Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:33:13.039" endtime="20211124 20:33:13.063"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:04.027" endtime="20211124 20:33:13.063"/>
+</kw>
+<kw name="-VALIDAR USUARIO VALIDO CV-" library="common_functionalities">
+<arg>${email_valido}</arg>
+<arg>${pass_valido}</arg>
+<kw name="-ABRIR LOGIN PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/login</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211124 20:33:13.065" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/login'.</msg>
+<status status="PASS" starttime="20211124 20:33:13.065" endtime="20211124 20:33:18.572"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:13.064" endtime="20211124 20:33:18.573"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA LOGIN-" library="common_functionalities">
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211124 20:33:18.574" endtime="20211124 20:33:18.628"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211124 20:33:18.630" level="INFO">Typing text 's_tamezaa@globalhitss.com' into text field 'xpath=//*[@id="emailLogin"]'.</msg>
+<status status="PASS" starttime="20211124 20:33:18.628" endtime="20211124 20:33:18.816"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_email['log_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211124 20:33:18.818" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20211124 20:33:18.816" endtime="20211124 20:33:19.102"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:18.573" endtime="20211124 20:33:19.103"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA LOGIN-" library="common_functionalities">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211124 20:33:19.103" endtime="20211124 20:33:19.461"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211124 20:33:19.462" level="INFO">Typing text 'Claro123!' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20211124 20:33:19.461" endtime="20211124 20:33:19.546"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_pass['log_pass_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211124 20:33:19.548" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button'.</msg>
+<status status="PASS" starttime="20211124 20:33:19.546" endtime="20211124 20:33:19.752"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:19.103" endtime="20211124 20:33:19.753"/>
+</kw>
+<kw name="-CLICK IMAGEN DE PERFIL-" library="common_functionalities">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211124 20:33:19.754" endtime="20211124 20:33:28.024"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211124 20:33:28.025" level="INFO">Clicking element 'xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]'.</msg>
+<status status="PASS" starttime="20211124 20:33:28.024" endtime="20211124 20:33:28.156"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:19.753" endtime="20211124 20:33:28.156"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//i[@name='search']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211124 20:33:28.156" endtime="20211124 20:33:30.640"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:13.063" endtime="20211124 20:33:30.640"/>
+</kw>
+<kw name="-CERRAR TODOS LOS NAVEGADORES-" library="common_functionalities">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211124 20:33:30.641" endtime="20211124 20:33:30.772"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:30.640" endtime="20211124 20:33:30.772"/>
+</kw>
+<kw name="-TERMINAR CHARLES-" library="common_functionalities" type="TEARDOWN">
+<kw name="Download Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:33:30.773" endtime="20211124 20:33:31.188"/>
+</kw>
+<kw name="Stop Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:33:31.189" endtime="20211124 20:33:31.203"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211124 20:33:39.206" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211124 20:33:31.204" endtime="20211124 20:33:39.206"/>
+</kw>
+<kw name="Terminate All Charles Proxy Sessions" library="charles_library">
+<status status="PASS" starttime="20211124 20:33:39.207" endtime="20211124 20:33:39.418"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:30.773" endtime="20211124 20:33:39.418"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:04.027" endtime="20211124 20:33:39.418"/>
+</test>
+<test id="s1-t2" name="CV-MX-WEB-ACCESO-VALIDAR LOGIN CON PASSWORD INCORRECTO">
+<kw name="-ABRIR CHARLES-" library="common_functionalities" type="SETUP">
+<kw name="Start Charles Proxy In Headless Mode" library="charles_library">
+<status status="PASS" starttime="20211124 20:33:39.420" endtime="20211124 20:33:43.427"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211124 20:33:48.428" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211124 20:33:43.427" endtime="20211124 20:33:48.428"/>
+</kw>
+<kw name="Start Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:33:48.428" endtime="20211124 20:33:48.449"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:39.419" endtime="20211124 20:33:48.449"/>
+</kw>
+<kw name="-VALIDAR USUARIO NO VALIDO CV-" library="common_functionalities">
+<arg>${email_valido}</arg>
+<arg>${pass_novalido}</arg>
+<kw name="-ABRIR LOGIN PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/login</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211124 20:33:48.451" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/login'.</msg>
+<status status="PASS" starttime="20211124 20:33:48.450" endtime="20211124 20:33:53.838"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:48.450" endtime="20211124 20:33:53.838"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA LOGIN-" library="common_functionalities">
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211124 20:33:53.840" endtime="20211124 20:33:53.875"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211124 20:33:53.876" level="INFO">Typing text 's_tamezaa@globalhitss.com' into text field 'xpath=//*[@id="emailLogin"]'.</msg>
+<status status="PASS" starttime="20211124 20:33:53.875" endtime="20211124 20:33:54.030"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_email['log_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211124 20:33:54.032" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20211124 20:33:54.030" endtime="20211124 20:33:54.175"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:53.839" endtime="20211124 20:33:54.175"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA LOGIN-" library="common_functionalities">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211124 20:33:54.176" endtime="20211124 20:33:54.611"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211124 20:33:54.613" level="INFO">Typing text 'Claro123' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20211124 20:33:54.611" endtime="20211124 20:33:54.697"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_pass['log_pass_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211124 20:33:54.699" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button'.</msg>
+<status status="PASS" starttime="20211124 20:33:54.697" endtime="20211124 20:33:54.845"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:54.175" endtime="20211124 20:33:54.846"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class='_l88cd _2hS3x']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211124 20:33:54.846" endtime="20211124 20:33:54.855"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:48.450" endtime="20211124 20:33:54.855"/>
+</kw>
+<kw name="-CERRAR TODOS LOS NAVEGADORES-" library="common_functionalities">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211124 20:33:54.856" endtime="20211124 20:33:54.948"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:54.855" endtime="20211124 20:33:54.948"/>
+</kw>
+<kw name="-TERMINAR CHARLES-" library="common_functionalities" type="TEARDOWN">
+<kw name="Download Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:33:54.949" endtime="20211124 20:33:55.206"/>
+</kw>
+<kw name="Stop Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:33:55.206" endtime="20211124 20:33:55.219"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211124 20:34:03.219" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211124 20:33:55.219" endtime="20211124 20:34:03.219"/>
+</kw>
+<kw name="Terminate All Charles Proxy Sessions" library="charles_library">
+<status status="PASS" starttime="20211124 20:34:03.220" endtime="20211124 20:34:03.394"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:54.948" endtime="20211124 20:34:03.394"/>
+</kw>
+<status status="PASS" starttime="20211124 20:33:39.419" endtime="20211124 20:34:03.394"/>
+</test>
+<test id="s1-t3" name="CV-MX-WEB-ACCESO-VALIDAR LOGOUT">
+<kw name="-ABRIR CHARLES-" library="common_functionalities" type="SETUP">
+<kw name="Start Charles Proxy In Headless Mode" library="charles_library">
+<status status="PASS" starttime="20211124 20:34:03.395" endtime="20211124 20:34:07.403"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211124 20:34:12.406" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211124 20:34:07.403" endtime="20211124 20:34:12.406"/>
+</kw>
+<kw name="Start Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:34:12.406" endtime="20211124 20:34:12.434"/>
+</kw>
+<status status="PASS" starttime="20211124 20:34:03.395" endtime="20211124 20:34:12.434"/>
+</kw>
+<kw name="-LOGIN HOME CV-" library="common_functionalities">
+<arg>${email_valido}</arg>
+<arg>${pass_valido}</arg>
+<kw name="-ABRIR LOGIN PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/login</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211124 20:34:12.436" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/login'.</msg>
+<status status="PASS" starttime="20211124 20:34:12.435" endtime="20211124 20:34:18.113"/>
+</kw>
+<status status="PASS" starttime="20211124 20:34:12.435" endtime="20211124 20:34:18.113"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA LOGIN-" library="common_functionalities">
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211124 20:34:18.114" endtime="20211124 20:34:18.155"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211124 20:34:18.157" level="INFO">Typing text 's_tamezaa@globalhitss.com' into text field 'xpath=//*[@id="emailLogin"]'.</msg>
+<status status="PASS" starttime="20211124 20:34:18.155" endtime="20211124 20:34:18.374"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_email['log_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211124 20:34:18.376" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20211124 20:34:18.374" endtime="20211124 20:34:18.528"/>
+</kw>
+<status status="PASS" starttime="20211124 20:34:18.113" endtime="20211124 20:34:18.528"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA LOGIN-" library="common_functionalities">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20211124 20:34:18.529" endtime="20211124 20:34:18.796"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211124 20:34:18.798" level="INFO">Typing text 'Claro123!' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20211124 20:34:18.796" endtime="20211124 20:34:18.955"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${elementos_login_pass['log_pass_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211124 20:34:18.956" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button'.</msg>
+<status status="PASS" starttime="20211124 20:34:18.955" endtime="20211124 20:34:19.088"/>
+</kw>
+<status status="PASS" starttime="20211124 20:34:18.528" endtime="20211124 20:34:19.089"/>
+</kw>
+<kw name="-CLICK IMAGEN DE PERFIL-" library="common_functionalities">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211124 20:34:19.089" endtime="20211124 20:34:27.639"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211124 20:34:27.639" level="INFO">Clicking element 'xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]'.</msg>
+<status status="PASS" starttime="20211124 20:34:27.639" endtime="20211124 20:34:27.848"/>
+</kw>
+<status status="PASS" starttime="20211124 20:34:19.089" endtime="20211124 20:34:27.848"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//i[@name='search']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211124 20:34:27.848" endtime="20211124 20:34:29.855"/>
+</kw>
+<status status="PASS" starttime="20211124 20:34:12.434" endtime="20211124 20:34:29.855"/>
+</kw>
+<kw name="-LOGOUT HOME CV-" library="common_functionalities">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath=//*[@class='nav_profileMenu--span nav_profileMenu--padding']</arg>
+<arg>'Cerrar Sesión'</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20211124 20:34:29.856" level="INFO">Selecting options from selection list 'xpath=//*[@class='nav_profileMenu--span nav_profileMenu--padding']' by value 'Cerrar Sesión'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211124 20:34:30.267" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211124 20:34:29.962" endtime="20211124 20:34:30.267"/>
+</kw>
+<msg timestamp="20211124 20:34:30.271" level="FAIL">List with locator 'xpath=//*[@class='nav_profileMenu--span nav_profileMenu--padding']' not found.</msg>
+<status status="FAIL" starttime="20211124 20:34:29.856" endtime="20211124 20:34:30.271"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[normalize-space()='Cerrar Sesión']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20211124 20:34:30.271" endtime="20211124 20:34:30.271"/>
+</kw>
+<status status="FAIL" starttime="20211124 20:34:29.855" endtime="20211124 20:34:30.272"/>
+</kw>
+<kw name="-TERMINAR CHARLES-" library="common_functionalities" type="TEARDOWN">
+<kw name="Download Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:34:30.274" endtime="20211124 20:34:30.672"/>
+</kw>
+<kw name="Stop Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:34:30.672" endtime="20211124 20:34:30.685"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211124 20:34:38.685" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211124 20:34:30.685" endtime="20211124 20:34:38.686"/>
+</kw>
+<kw name="Terminate All Charles Proxy Sessions" library="charles_library">
+<status status="PASS" starttime="20211124 20:34:38.686" endtime="20211124 20:34:38.915"/>
+</kw>
+<status status="PASS" starttime="20211124 20:34:30.273" endtime="20211124 20:34:38.916"/>
+</kw>
+<status status="FAIL" starttime="20211124 20:34:03.394" endtime="20211124 20:34:38.916">List with locator 'xpath=//*[@class='nav_profileMenu--span nav_profileMenu--padding']' not found.</status>
+</test>
+<test id="s1-t4" name="CV-MX-WEB-ACCESO-VALIDAR REGISTRO CON CUENTA NUEVA">
+<kw name="-ABRIR CHARLES-" library="common_functionalities" type="SETUP">
+<kw name="Start Charles Proxy In Headless Mode" library="charles_library">
+<status status="PASS" starttime="20211124 20:34:38.918" endtime="20211124 20:34:42.928"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211124 20:34:47.931" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211124 20:34:42.929" endtime="20211124 20:34:47.931"/>
+</kw>
+<kw name="Start Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:34:47.931" endtime="20211124 20:34:47.957"/>
+</kw>
+<status status="PASS" starttime="20211124 20:34:38.917" endtime="20211124 20:34:47.957"/>
+</kw>
+<kw name="-ABRIR REGISTER PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.clarovideo.com/mexico/register</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211124 20:34:47.958" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/register'.</msg>
+<status status="PASS" starttime="20211124 20:34:47.957" endtime="20211124 20:34:54.485"/>
+</kw>
+<status status="PASS" starttime="20211124 20:34:47.957" endtime="20211124 20:34:54.486"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA REGISTRO-" library="common_functionalities">
+<arg>${EMAIL_RANDOM}</arg>
+<msg timestamp="20211124 20:34:54.490" level="FAIL">Variable '${EMAIL_RANDOM}' not found.</msg>
+<status status="FAIL" starttime="20211124 20:34:54.486" endtime="20211124 20:34:54.490"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA REGISTRO-" library="common_functionalities">
+<arg>${pass_valido_registro}</arg>
+<status status="NOT RUN" starttime="20211124 20:34:54.490" endtime="20211124 20:34:54.490"/>
+</kw>
+<kw name="-TERMINAR CHARLES-" library="common_functionalities" type="TEARDOWN">
+<kw name="Download Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:34:54.492" endtime="20211124 20:34:54.826"/>
+</kw>
+<kw name="Stop Charles Proxy Session Recording" library="charles_library">
+<status status="PASS" starttime="20211124 20:34:54.829" endtime="20211124 20:34:54.841"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211124 20:35:02.842" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20211124 20:34:54.842" endtime="20211124 20:35:02.843"/>
+</kw>
+<kw name="Terminate All Charles Proxy Sessions" library="charles_library">
+<status status="PASS" starttime="20211124 20:35:02.843" endtime="20211124 20:35:03.042"/>
+</kw>
+<status status="PASS" starttime="20211124 20:34:54.491" endtime="20211124 20:35:03.042"/>
+</kw>
+<status status="FAIL" starttime="20211124 20:34:38.917" endtime="20211124 20:35:03.042">Variable '${EMAIL_RANDOM}' not found.</status>
+</test>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn" type="TEARDOWN">
+<arg>-TERMINAR CONFIGURACIÓN SUITETEST-</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="-TERMINAR CONFIGURACIÓN SUITETEST-" library="common_functionalities">
+<kw name="-CERRAR TODOS LOS NAVEGADORES-" library="common_functionalities">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211124 20:35:03.044" endtime="20211124 20:35:03.160"/>
+</kw>
+<status status="PASS" starttime="20211124 20:35:03.044" endtime="20211124 20:35:03.161"/>
+</kw>
+<status status="PASS" starttime="20211124 20:35:03.044" endtime="20211124 20:35:03.161"/>
+</kw>
+<status status="PASS" starttime="20211124 20:35:03.043" endtime="20211124 20:35:03.161"/>
+</kw>
+<doc>validar funcionalidades ACCESO (NA_QC)</doc>
+<status status="FAIL" starttime="20211124 20:33:03.669" endtime="20211124 20:35:03.161"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="2" skip="0" id="s1" name="CV-MX-WEB-ACCESO">CV-MX-WEB-ACCESO</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

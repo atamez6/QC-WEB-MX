@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation        validar funcionalidades NAVEGACION (NA_QC)
-Resource             /Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/common_functionalities/common_functionalities.robot
+Resource              /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/common_functionalities/common_functionalities.robot
 #Test Setup           Iniciar configuracion test
 #Test Teardown        Terminar configuracion test
 #Suite Setup          Iniciar configuracion suitetest

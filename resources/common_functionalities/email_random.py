@@ -9,6 +9,3 @@ def email_random_python():
 	count = 5
 	email_random=''.join(random.choice(alphabet_list)+''.join(random.choice(var1))for i in range (count)) + domain_name
 	return email_random
-
-
- 
