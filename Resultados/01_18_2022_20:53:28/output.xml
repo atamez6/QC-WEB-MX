@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.9.9 on darwin)" generated="20220118 20:53:28.862" rpa="false" schemaversion="2">
+<suite id="s1" name="Tester" source="/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/testCases/tester.robot">
+<test id="s1-t1" name="CV-MX-WEB-ACCESO-VALIDAR LOGIN CON USUARIO CORRECTO">
+<kw name="-LOGIN HOME CV-" library="common_functionalities">
+<arg>${email_valido}</arg>
+<arg>${pass_valido}</arg>
+<kw name="-ABRIR LOGIN PAGE-" library="common_functionalities">
+<kw name="OPEN BROWSER">
+<arg>${url_login_page}</arg>
+<arg>${browser}</arg>
+<msg timestamp="20220118 20:53:28.950" level="FAIL">No keyword with name 'OPEN BROWSER' found.</msg>
+<status status="FAIL" starttime="20220118 20:53:28.950" endtime="20220118 20:53:28.950"/>
+</kw>
+<status status="FAIL" starttime="20220118 20:53:28.946" endtime="20220118 20:53:28.952"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA LOGIN-" library="common_functionalities">
+<arg>${email}</arg>
+<status status="NOT RUN" starttime="20220118 20:53:28.952" endtime="20220118 20:53:28.952"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA LOGIN-" library="common_functionalities">
+<arg>${password}</arg>
+<status status="NOT RUN" starttime="20220118 20:53:28.952" endtime="20220118 20:53:28.952"/>
+</kw>
+<kw name="-CLICK IMAGEN DE PERFIL-" library="common_functionalities">
+<status status="NOT RUN" starttime="20220118 20:53:28.952" endtime="20220118 20:53:28.952"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220118 20:53:28.952" endtime="20220118 20:53:28.953"/>
+</kw>
+<kw name="wait until page contains element">
+<arg>xpath=//i[@name='search']</arg>
+<status status="NOT RUN" starttime="20220118 20:53:28.957" endtime="20220118 20:53:28.957"/>
+</kw>
+<status status="FAIL" starttime="20220118 20:53:28.945" endtime="20220118 20:53:28.958"/>
+</kw>
+<kw name="-TERMINAR CONFIGURACIÓN TESTCASE-" library="common_functionalities" type="TEARDOWN">
+<kw name="capture page screenshot">
+<msg timestamp="20220118 20:53:28.962" level="FAIL">No keyword with name 'capture page screenshot' found.</msg>
+<status status="FAIL" starttime="20220118 20:53:28.962" endtime="20220118 20:53:28.962"/>
+</kw>
+<status status="FAIL" starttime="20220118 20:53:28.958" endtime="20220118 20:53:28.962">No keyword with name 'capture page screenshot' found.</status>
+</kw>
+<status status="FAIL" starttime="20220118 20:53:28.944" endtime="20220118 20:53:28.962">No keyword with name 'OPEN BROWSER' found.
+
+Also teardown failed:
+No keyword with name 'capture page screenshot' found.</status>
+</test>
+<doc>validar funcionalidades ACCESO (NA_QC)</doc>
+<status status="FAIL" starttime="20220118 20:53:28.868" endtime="20220118 20:53:28.963"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tester">Tester</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220118 20:53:28.902" level="ERROR">Error in file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/common_functionalities/common_functionalities.robot' on line 2: Importing library 'Selenium2Library' failed: ModuleNotFoundError: No module named 'Selenium2Library'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /usr/local/bin
+  /usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python39.zip
+  /usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9
+  /usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9/lib-dynload
+  /usr/local/lib/python3.9/site-packages</msg>
+<msg timestamp="20220118 20:53:28.924" level="ERROR">Error in file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/common_functionalities/common_functionalities.robot' on line 6: Importing library '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/charles_proxy/charles_library.py' failed: ModuleNotFoundError: No module named 'requests'
+Traceback (most recent call last):
+  File "/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/charles_proxy/charles_library.py", line 5, in &lt;module&gt;
+    import requests
+PYTHONPATH:
+  /usr/local/bin
+  /usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python39.zip
+  /usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9
+  /usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9/lib-dynload
+  /usr/local/lib/python3.9/site-packages</msg>
+</errors>
+</robot>

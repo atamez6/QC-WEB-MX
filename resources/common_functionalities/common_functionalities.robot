@@ -30,6 +30,7 @@ Resource       ../common_functionalities/variables.robot
   -ABRIR LOGIN PAGE-
   -INGRESAR EMAIL PARA LOGIN-        ${email}
   -INGRESAR PASSWORD PARA LOGIN-     ${password}
+   Sleep   10
   -CLICK IMAGEN DE PERFIL-
    Sleep   10
    wait until page contains element          xpath=//i[@name='search']

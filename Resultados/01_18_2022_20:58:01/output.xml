@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.9.9 on darwin)" generated="20220118 20:58:01.699" rpa="false" schemaversion="2">
+<suite id="s1" name="Tester" source="/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/testCases/tester.robot">
+<test id="s1-t1" name="CV-MX-WEB-ACCESO-VALIDAR LOGIN CON USUARIO CORRECTO">
+<kw name="-LOGIN HOME CV-" library="common_functionalities">
+<arg>${email_valido}</arg>
+<arg>${pass_valido}</arg>
+<kw name="-ABRIR LOGIN PAGE-" library="common_functionalities">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url_login_page}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220118 20:58:02.100" level="INFO">Opening browser 'chrome' to base url 'https://www.clarovideo.com/mexico/login'.</msg>
+<status status="PASS" starttime="20220118 20:58:02.100" endtime="20220118 20:58:14.228"/>
+</kw>
+<status status="PASS" starttime="20220118 20:58:02.099" endtime="20220118 20:58:14.229"/>
+</kw>
+<kw name="-INGRESAR EMAIL PARA LOGIN-" library="common_functionalities">
+<arg>${email}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220118 20:58:14.229" endtime="20220118 20:58:20.572"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${elementos_login_email['reg_emailtextbox']}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220118 20:58:20.573" level="INFO">Typing text 's_tamezaa@globalhitss.com' into text field 'xpath=//*[@id="emailLogin"]'.</msg>
+<status status="PASS" starttime="20220118 20:58:20.572" endtime="20220118 20:58:20.729"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${elementos_login_email['log_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220118 20:58:20.731" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20220118 20:58:20.730" endtime="20220118 20:58:20.854"/>
+</kw>
+<status status="PASS" starttime="20220118 20:58:14.229" endtime="20220118 20:58:20.854"/>
+</kw>
+<kw name="-INGRESAR PASSWORD PARA LOGIN-" library="common_functionalities">
+<arg>${password}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220118 20:58:20.855" endtime="20220118 20:58:22.336"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${elementos_login_pass['reg_pass_passtextbox']}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220118 20:58:22.337" level="INFO">Typing text 'Claro123!' into text field 'xpath=//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20220118 20:58:22.336" endtime="20220118 20:58:22.406"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${elementos_login_pass['log_pass_siguiente']}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220118 20:58:22.408" level="INFO">Clicking button 'xpath=/html/body/div[2]/div/div[1]/div/div[2]/div/div/div[4]/div/button'.</msg>
+<status status="PASS" starttime="20220118 20:58:22.407" endtime="20220118 20:58:22.503"/>
+</kw>
+<status status="PASS" starttime="20220118 20:58:20.854" endtime="20220118 20:58:22.503"/>
+</kw>
+<kw name="-CLICK IMAGEN DE PERFIL-" library="common_functionalities">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>${elementos_profile_page['selectProfile_1_image']}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220118 20:58:22.504" endtime="20220118 20:58:35.585"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${elementos_profile_page['selectProfile_1_image']}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220118 20:58:35.586" level="INFO">Clicking element 'xpath=//div[@class='image-grid-container']//div[1]//div[1]//img[1]'.</msg>
+<status status="PASS" starttime="20220118 20:58:35.585" endtime="20220118 20:58:35.629"/>
+</kw>
+<status status="PASS" starttime="20220118 20:58:22.503" endtime="20220118 20:58:35.629"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220118 20:58:45.630" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220118 20:58:35.629" endtime="20220118 20:58:45.630"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<arg>xpath=//i[@name='search']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20220118 20:59:06.120" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220118 20:59:06.122" level="FAIL">Element 'xpath=//i[@name='search']' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20220118 20:58:45.631" endtime="20220118 20:59:06.122"/>
+</kw>
+<status status="FAIL" starttime="20220118 20:58:02.098" endtime="20220118 20:59:06.123"/>
+</kw>
+<kw name="-TERMINAR CONFIGURACIÓN TESTCASE-" library="common_functionalities" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220118 20:59:06.365" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220118 20:59:06.124" endtime="20220118 20:59:06.365"/>
+</kw>
+<status status="PASS" starttime="20220118 20:59:06.123" endtime="20220118 20:59:06.365"/>
+</kw>
+<status status="FAIL" starttime="20220118 20:58:02.097" endtime="20220118 20:59:06.366">Element 'xpath=//i[@name='search']' did not appear in 5 seconds.</status>
+</test>
+<doc>validar funcionalidades ACCESO (NA_QC)</doc>
+<status status="FAIL" starttime="20220118 20:58:01.706" endtime="20220118 20:59:06.367"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tester">Tester</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220118 20:58:02.064" level="ERROR">Error in file '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/common_functionalities/common_functionalities.robot' on line 6: Importing library '/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/charles_proxy/charles_library.py' failed: ModuleNotFoundError: No module named 'requests'
+Traceback (most recent call last):
+  File "/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/charles_proxy/charles_library.py", line 5, in &lt;module&gt;
+    import requests
+PYTHONPATH:
+  /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/venv/bin
+  /usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python39.zip
+  /usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9
+  /usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9/lib-dynload
+  /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/venv/lib/python3.9/site-packages</msg>
+</errors>
+</robot>
