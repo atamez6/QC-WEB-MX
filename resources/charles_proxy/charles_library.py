@@ -1,7 +1,7 @@
 import sysconfig
 import os
 import time
-import psutil
+#import psutil
 import requests
 
 
@@ -16,7 +16,7 @@ port = 8888
 
 def start_charles_proxy_in_headless_mode():
     current_working_directory = os.getcwd()
-    charles_proxy_configuration_file_path = "/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/charles_proxy/com.xk72.charles.config"
+    charles_proxy_configuration_file_path = "/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/charles_proxy/com.xk72.charles.config"
     os.system("Charles" + " -headless -config " + charles_proxy_configuration_file_path + " &")
     #os.system("sudo echo rdr on bridge100 inet proto tcp from any to any port 80 -> 127.0.0.1 port 8888" + "| sudo pfctl -ef-")
     time.sleep(4)
@@ -37,7 +37,7 @@ def download_charles_proxy_session_recording():
     current_time = now.strftime("%H:%M:%S")
     #current_time= os.system("export TESTNAME")
     test_suite_name= os.environ['TESTNAME']
-    original_raw_charles_proxy_session_file_path = "/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/Resultados/charles_traces/{current_time}{test_suite_name}.chls".format(current_time=current_time,test_suite_name=test_suite_name)
+    original_raw_charles_proxy_session_file_path = "/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/Resultados/charles_traces/{current_time}{test_suite_name}.chls".format(current_time=current_time,test_suite_name=test_suite_name)
     #original_raw_charles_proxy_session_file_path = "/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/charles_proxy/original-raw-session-file.chls"
     #original_raw_charles_proxy_session_file_path = "session.chls"
     #download = requests.get(charles_proxy_download_recording_url, proxies=local_machine_url_requests_proxy)
@@ -56,18 +56,18 @@ def convert_recorded_session_file():
     #converted_json_charles_proxy_session_file_path = "/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/charles_proxy/new-json-session-file.chlsj"
     #os.system("Charles " + "convert " + original_raw_charles_proxy_session_file_path + " " + converted_json_charles_proxy_session_file_path)
 
-
-def terminate_all_charles_proxy_sessions():
-    for process in psutil.process_iter():
-        if process.name() == "Charles":
-            #process.kill()
-            os.system("killall -9 Charles")
-            os.system("killall -9 Charles *")
+"""def terminate_all_charles_proxy_sessions():
+ #   for process in psutil.process_iter():
+  #      if process.name() == "Charles":
+   #         #process.kill()
+   3         os.system("killall -9 Charles")
+        os.system("killall -9 Charles *")
             os.system("networksetup -setwebproxystate Wi-Fi off")
             os.system("networksetup -setsecurewebproxystate Wi-Fi off")
+"""
 
-#def terminate_all_charles_proxy_sessions():
- #   os.system("killall -9 Charles")
-  #  os.system("killall -9 Charles *")
-   # os.system("networksetup -setwebproxystate Wi-Fi off")
-    #os.system("networksetup -setsecurewebproxystate Wi-Fi off")
+def terminate_all_charles_proxy_sessions():
+    os.system("killall -9 Charles")
+    os.system("killall -9 Charles *")
+    os.system("networksetup -setwebproxystate Wi-Fi off")
+    os.system("networksetup -setsecurewebproxystate Wi-Fi off")

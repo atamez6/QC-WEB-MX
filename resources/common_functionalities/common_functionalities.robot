@@ -1,33 +1,39 @@
 *** Settings ***
-Library        SeleniumLibrary     implicit_wait=15s
+Library        Selenium2Library       implicit_wait=20s
 Library        OperatingSystem
 Library        Process
 Library        Collections
-Library        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/charles_proxy/charles_library.py
-Library          /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/common_functionalities/email_random.py
-Resource        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/common_functionalities/variables.robot
-#Resource      /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/resources/common_functionalities/special_functionalities.robot
+Library       ../../resources/charles_proxy/charles_library.py
+Library        ../common_functionalities/email_random.py
+Resource       ../common_functionalities/variables.robot
+#Resource      ../common_functionalities/special_functionalities.robot
 
 
 
 *** Keywords ***
 -ABRIR REGISTER PAGE-
-  open browser   https://www.clarovideo.com/mexico/register    ${browser}
+  open browser    ${url_register_page}    ${browser}
 
 -ABRIR LOGIN PAGE-
-   OPEN BROWSER    https://www.clarovideo.com/mexico/login       ${browser}
+   OPEN BROWSER    ${url_login_page}        ${browser}
 
 -ABRIR LANDIND PAGE-
-  open browser   https://www.clarovideo.com/mexico/landing     ${browser}
+  open browser     ${url_landing_page}    ${browser}
 
+-ABRIR PAYMENT PAGE-
+   -LOGIN HOME CV-
+   go to   ${url_payment_page}
 
 -LOGIN HOME CV-
    [Arguments]                       ${email}   ${password}
+
   -ABRIR LOGIN PAGE-
   -INGRESAR EMAIL PARA LOGIN-        ${email}
   -INGRESAR PASSWORD PARA LOGIN-     ${password}
   -CLICK IMAGEN DE PERFIL-
-   wait until page contains element     xpath=//i[@name='search']
+   Sleep   10
+   wait until page contains element          xpath=//i[@name='search']
+
 
 -LOGOUT HOME CV-
 #eleementos del menu dropdown de perfil home CV
@@ -35,13 +41,12 @@ Resource        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WE
    click element      xpath=//a[normalize-space()='Cerrar Sesión']
 
 
--VALIDAR USUARIO VALIDO CV-
+-VALIDAR USUARIO CV-
    [Arguments]                       ${email}   ${password}
   -ABRIR LOGIN PAGE-
   -INGRESAR EMAIL PARA LOGIN-        ${email}
   -INGRESAR PASSWORD PARA LOGIN-     ${password}
-  -CLICK IMAGEN DE PERFIL-
-   wait until page contains element     xpath=//i[@name='search']
+
 
 -VALIDAR USUARIO NO VALIDO CV-
    [Arguments]                       ${email}   ${password}
@@ -51,10 +56,7 @@ Resource        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WE
    wait until page contains element    xpath=//div[@class='_l88cd _2hS3x']
 
 
--ABRIR PAYMENT PAGE-
-  [Arguments]                        ${email}    ${password}
-  -ABRIR HOME CV-
-   go to   https://www.clarovideo.com/mexico/payment
+
 
 -INGRESAR EMAIL PARA LOGIN-
   [Arguments]                        ${email}
@@ -80,14 +82,21 @@ Resource        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WE
    wait until element is visible     ${elementos_register_page_pass['reg_passfield']}
    input text                        ${elementos_register_page_pass['reg_passfield']}       ${pass_valido}
    click button                      ${elementos_register_page_pass['reg_siguiente']}
-   wait until page contains element     xpath=//i[@name='search']
+
 
 
 -CLICK IMAGEN DE PERFIL-
    # wait until element is visible     xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]
-    wait until page contains element    xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]
-    click element                     xpath=//div[contains(@class,'image-grid-container')]//div[1]//div[1]//img[1]
+   #${elementos_profile_page['selectProfile_1_image']}
+   #${elementos_profile_page['selectProfile_1_image']} //*[@id="app"]/div/div[1]/div[1]/div/div/div[3]/div/div/div[1]/div[1]/img
+    wait until page contains element      ${elementos_profile_page['selectProfile_1_image']}
+    click element                        ${elementos_profile_page['selectProfile_1_image']}
 
+-VALIDAR CARGA HOME-
+    Set browser Implicit Wait   20
+    wait until page contains element        ${elementos_home_page['home_lupa']}
+     #${elementos_home_page['home_lupa']}
+   #xpath=//*[@id="app"]/div/div[1]/header/div/div/a/img
 
 -CERRAR NAVEGADOR-
     close browser
@@ -100,31 +109,29 @@ Resource        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WE
 
 -ABRIR CHARLES-
     start_charles_proxy_in_headless_mode
-    Sleep   5
     start_charles_proxy_session_recording
 
 -TERMINAR CHARLES-
-    download_charles_proxy_session_recording
     stop_charles_proxy_session_recording
-
-    #convert_recorded_session_file
-    Sleep   8
+    download_charles_proxy_session_recording
     terminate_all_charles_proxy_sessions
 
 -CONFIGURACIÓN INICIAL SUITETEST-
-    #-ABRIR CHARLES-
-    set selenium timeout   10
+    -ABRIR CHARLES-
+
 
 -TERMINAR CONFIGURACIÓN SUITETEST-
-    #-TERMINAR CHARLES-
-    -CERRAR TODOS LOS NAVEGADORES-
+    -TERMINAR CHARLES-
+    #-CERRAR TODOS LOS NAVEGADORES-
 
 -CONFIGURACIÓN TESTCASE-
    -CONFIGURAR DIRECTORIO SCREENSHOTS-
 
 -TERMINAR CONFIGURACIÓN TESTCASE-
      capture page screenshot
-    -CERRAR NAVEGADOR-
+
+
+
 
 -EMAIL_RANDOM
     ${EMAIL_RANDOM}=    email_random_python
@@ -132,10 +139,9 @@ Resource        /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WE
 -VALIDAR TEXTOS Y ELEMENTOS-
   [Arguments]    ${a1}    ${a2}
    FOR  ${element}   IN   @{a1}
-      scroll element into view    ${a1['${element}']}
       Run Keyword And Continue On Failure   Wait Until Element is Visible      ${a1['${element}']}
       Run Keyword And Continue On Failure   element text should be      ${a1['${element}']}    ${a2['${element}']}
-      #Run Keyword And Continue On Failure   capture element screenshot    ${a1['${element}']}
+      Run Keyword And Continue On Failure   capture element screenshot    ${a1['${element}']}
 
    END
 

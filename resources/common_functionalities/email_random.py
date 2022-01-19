@@ -7,5 +7,8 @@ def email_random_python():
 	var2 = ['_','+']
 	domain_name ='@gmail.com'
 	count = 5
-	email_random=''.join(random.choice(alphabet_list)+''.join(random.choice(var1))for i in range (count)) + domain_name
+	email_random =''.join(random.choice(alphabet_list)+''.join(random.choice(var1))for i in range(count)) + domain_name
+	print (email_random)
 	return email_random
+
+email_random_python()
