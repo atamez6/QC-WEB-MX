@@ -18,7 +18,7 @@ ${screenshots-folder}      ${localpath}/Resultados/screenshots
 ${textos_payment}          ${localpath}/resources/CV-POM/paymentPage/textosPayment
 ${path_cv-pom}             ${localpath}/resources/CV-POM
 ${politicas_xls}                          ${localpath}/testData/politicasMx.xls
-
+${telmex_texto}                 ${localpath}/testData/telmex.xls
 
 
 #urls

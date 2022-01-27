@@ -29,3 +29,4 @@ ajustar usuarios/pass  si es necesario
 .selenium2library
 .brew to install pip
 pip install requests
+pip install robotframework-excellibrary-xwfintech==0.0.3

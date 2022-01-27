@@ -68,7 +68,7 @@ Library	       ExcelLibrary
    END
 
 -VALIDAR TEXTOS CON XLSX-
-   [Arguments]       ${excel_path}        ${sheet_name}    ${sheet_name2}    ${e1['elemento']}
+   [Arguments]       ${excel_path}        ${sheet_name}     ${e1['elemento']}
    wait until element is visible   ${e1['elemento']}
    capture element screenshot     ${e1['elemento']}
    Open excel     ${excel_path}

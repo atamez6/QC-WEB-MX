@@ -38,9 +38,11 @@ CV-WEB-ACCESO-VALIDAR LOGOUT
     -LOGIN HOME CV-      ${email_valido}    ${pass_valido}
     -LOGOUT HOME CV-
 
-#CV-WEB-ACCESO-VALIDAR REGISTRO CON CUENTA NUEVA
- #   -ABRIR REGISTER PAGE-
-  #  -INGRESAR EMAIL PARA REGISTRO-    ${email_random_python}
-   # -INGRESAR PASSWORD PARA REGISTRO-  ${pass_valido_registro}
+CV-MX-WEB-NAVEGACION-VALIDAR POLITICAS DE PRIVACIDAD
+    -ABRIR POLITICAS PAGE-
+    -VALIDAR TEXTOS CON XLSX-         ${politicas_xls}      Sheet1      ${politicas_de_privacidad['politicas_frame']}
 
-
+CV-MX-WEB-NAVEGACION-TELMEX VALIDAR TEXTO TERMINOS Y PROMOCIONES
+    -ABRIR REGISTER PAGE-
+    -CLICK TERMINOS Y PROMOCIONES TELMEX-      ${elementos_register_page['reg_terms_promo']}
+    -VALIDAR TEXTOS CON XLSX-     ${telmex_texto}      telmex         ${elementos_conocePromos['telmex_texto_promos']}

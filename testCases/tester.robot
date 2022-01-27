@@ -8,14 +8,14 @@ Suite Teardown       -TERMINAR CONFIGURACIÓN SUITETEST-
 
 
 *** Test Cases ***
-CV-WEB-ACCESO-VALIDAR LOGOUT
-    -LOGIN HOME CV-      ${email_valido}    ${pass_valido}
-    -LOGOUT HOME CV-
+#CV-WEB-ACCESO-VALIDAR LOGOUT
+  #  -LOGIN HOME CV-      ${email_valido}    ${pass_valido}
+   # -LOGOUT HOME CV-
 
-CV-WEB-ACCESO-VALIDAR REGISTRO CON CUENTA NUEVA
-   -ABRIR REGISTER PAGE-
-    -INGRESAR EMAIL PARA REGISTRO-    ${EMAIL_RANDOM_PYTHON}
-    -INGRESAR PASSWORD PARA REGISTRO-  ${pass_valido_registro}
+#CV-WEB-ACCESO-VALIDAR REGISTRO CON CUENTA NUEVA
+ #  -ABRIR REGISTER PAGE-
+  #  -INGRESAR EMAIL PARA REGISTRO-    ${EMAIL_RANDOM_PYTHON}
+   # -INGRESAR PASSWORD PARA REGISTRO-  ${pass_valido_registro}
 
 #CV-WEB-NAVEGACION-VALIDAR ELEMENTOS REGISTER PAGE
  # -ABRIR REGISTER PAGE-
@@ -35,6 +35,12 @@ CV-WEB-ACCESO-VALIDAR REGISTRO CON CUENTA NUEVA
    #-CERRAR TODOS LOS NAVEGADORES-
 
 
-CV-MX-WEB-NAVEGACION-VALIDAR POLITICAS DE PRIVACIDAD
-    -ABRIR POLITICAS PAGE-
-    -VALIDAR TEXTOS CON XLSX-         ${politicas_xls}      Sheet1   Sheet2    ${politicas_de_privacidad['politicas_frame']}
+#CV-MX-WEB-NAVEGACION-VALIDAR POLITICAS DE PRIVACIDAD
+ #   -ABRIR POLITICAS PAGE-
+  #  -VALIDAR TEXTOS CON XLSX-         ${politicas_xls}      Sheet1      ${politicas_de_privacidad['politicas_frame']}
+
+
+CV-MX-WEB-NAVEGACION-TELMEX VALIDAR TEXTO TERMINOS Y PROMOCIONES
+    -ABRIR REGISTER PAGE-
+    -CLICK TERMINOS Y PROMOCIONES TELMEX-      ${elementos_register_page['reg_terms_promo']}
+    -VALIDAR TEXTOS CON XLSX-     ${telmex_texto}      telmex         ${elementos_conocePromos['telmex_texto_promos']}

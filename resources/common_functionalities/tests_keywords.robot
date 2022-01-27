@@ -108,6 +108,11 @@ Resource      ../common_functionalities/libraries_keywords.robot
   go to   ${url_licenciaUsuario_page}
 
 
+-CLICK TERMINOS Y PROMOCIONES TELMEX-
+    [Arguments]           ${elemento}
+    wait until page contains element     ${elemento}
+     click element     ${elemento}
+
 
 
 
