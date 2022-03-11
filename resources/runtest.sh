@@ -1,9 +1,9 @@
 #!/bin/bash
-cd  /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX
-networksetup -connectpppoeservice "PROD-MX"
+cd  /Users/neyraa/Desktop/QC-py/QC-WEB-MX
+networksetup -connectpppoeservice "Mexico-Global-UAT"
 sleep 4
 
-#declare -a tests=(CV-MX-WEB-NAVEGACION CV-MX-WEB-ACCESO CV-MX-WEB-NA)
+declare -a tests=(CV-MX-WEB-NAVEGACION CV-MX-WEB-ACCESO CV-MX-WEB-NA)
 declare -a tests=(tester)
 killall -9 charles
 killall -9 Charles
@@ -18,4 +18,4 @@ done
 
 networksetup -setwebproxystate Wi-Fi off
 networksetup -setsecurewebproxystate Wi-Fi off
-networksetup -disconnectpppoeservice "PROD-MX"
+networksetup -disconnectpppoeservice "Mexico-Global-UAT"
