@@ -13,5 +13,4 @@ def email_random_python():
     print(EMAIL_RANDOM_PYTHON)
     return EMAIL_RANDOM_PYTHON
 
-
 email_random_python()
