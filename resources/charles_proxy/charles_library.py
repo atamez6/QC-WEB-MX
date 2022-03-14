@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 
 charles_proxy_application_path = "/Users/at/Library/charles/Contents/MacOS/"
-local_machine_url_requests_proxy = "http://192.168.1.69:8888"
+local_machine_url_requests_proxy = "http://192.168.1.68:8888"
 charles_proxy_start_recording_url = "http://control.charles/recording/start"
 charles_proxy_stop_recording_url = "http://control.charles/recording/stop"
 charles_proxy_download_recording_url = "http://control.charles/session/download"

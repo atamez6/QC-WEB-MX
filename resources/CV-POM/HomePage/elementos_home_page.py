@@ -6,7 +6,7 @@ elementos_home_page= {
     "home_lupa": "xpath=//i[@name='search']",
     "home_avatar": "xpath=//a[@class='dropdown-toggle dropdownUser menu_user custom-menu-user-style hidden-xs']//img[@class='menu_user--img']",
     "home_nodo_inicio": "xpath=//div[contains(text(),'Inicio')]",
-    "home_nodo_catalogo": "xpath=//div[contains(text(),'Catálogo')]",
+        "home_nodo_catalogo": "xpath=//div[contains(text(),'Catálogo')]",
     "home_nodo_generos": "xpath=//div[contains(text(),'Géneros')]",
     "home_nodo_compra": "xpath=//div[contains(text(),'Compra y Renta')]",
     "home_nodo_canales": "xpath=//div[contains(text(),'Canales')]",

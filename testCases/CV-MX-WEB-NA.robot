@@ -13,6 +13,7 @@ CV-WEB-NAVEGACION-VALIDAR ELEMENTOS LANDING PAGE
    -VALIDAR TEXTOS Y ELEMENTOS-    ${elementos_landing_anonimo}     ${textos_landing_anonimo}
    -CERRAR TODOS LOS NAVEGADORES-
 
+
 CV-WEB-NAVEGACION-VALIDAR ELEMENTOS LOGIN PAGE
    -ABRIR LOGIN PAGE-
    -VALIDAR TEXTOS Y ELEMENTOS-    ${elementos_login_email}     ${textos_elementos_login_email}
