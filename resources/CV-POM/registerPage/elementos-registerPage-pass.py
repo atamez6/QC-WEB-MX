@@ -1,4 +1,4 @@
-#Elementos registerPage
+# coding=utf-8
 
 elementos_register_page_pass = {
 
