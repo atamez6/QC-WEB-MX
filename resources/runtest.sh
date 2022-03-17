@@ -2,7 +2,7 @@
 cd  /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX
 
 #declare -a tests=(CV-MX-WEB-NAVEGACION CV-MX-WEB-ACCESO CV-MX-WEB-NA)
-declare -a tests=(CV-MX-WEB-NA)
+declare -a tests=(tester)
 killall -9 charles||killall -9 Charles;networksetup -connectpppoeservice "PROD-MX"
 sleep 4
 
@@ -13,7 +13,7 @@ do
   declare  fecha=$(date +"%m_%d_%Y_%H:%M:%S")
   export   TESTNAME="$testname"
   #pabot --processes 1   --outputdir   Resultados/${fecha}   testCases/CV-MX-WEB-ACCESO.robot
-  robot --outputdir   Resultados/${TESTNAME}${fecha}   testCases/${TESTNAME}.robot
+  robot --outputdir   Resultados/${TESTNAME}${fecha}   -i test_funcional testCases/${TESTNAME}.robot
 done
 
 
