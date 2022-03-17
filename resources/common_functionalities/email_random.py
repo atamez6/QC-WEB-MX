@@ -13,4 +13,12 @@ def email_random_python():
     print(EMAIL_RANDOM_PYTHON)
     return EMAIL_RANDOM_PYTHON
 
+<<<<<<< HEAD
 email_random_python()
+=======
+
+
+email_random_python()
+
+
+>>>>>>> 56a4e31570bfcef936bc4ebd4c8e743f7d83a175

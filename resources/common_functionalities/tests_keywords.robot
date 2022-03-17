@@ -19,7 +19,10 @@ Resource      ../common_functionalities/libraries_keywords.robot
   open browser    ${url_register_page}    ${browser}
 
 -ABRIR LOGIN PAGE-
-   OPEN BROWSER    ${url_login_page}        ${browser}
+   OPEN BROWSER   ${url_login_page}     ${browser}
+
+
+
 
 -ABRIR LANDIND PAGE-
   open browser     ${url_landing_page}    ${browser}
@@ -33,10 +36,11 @@ Resource      ../common_functionalities/libraries_keywords.robot
 
 -LOGIN HOME CV-
    [Arguments]                       ${email}   ${password}
+
   -ABRIR LOGIN PAGE-
   -INGRESAR EMAIL PARA LOGIN-        ${email}
   -INGRESAR PASSWORD PARA LOGIN-     ${password}
-   Sleep   10
+   Sleep   20
   -CLICK IMAGEN DE PERFIL-
   -VALIDAR CARGA HOME-
 
@@ -114,16 +118,6 @@ Resource      ../common_functionalities/libraries_keywords.robot
      click element     ${elemento}
 
 
-
-
-
-
-
-
-
-
-
-
 -CLICK NODO CATALOGO-
   wait until page contains element    ${elementos_home_page['home_nodo_catalogo']}
   click element   ${elementos_home_page['home_nodo_catalogo']}
@@ -143,78 +137,7 @@ Resource      ../common_functionalities/libraries_keywords.robot
   wait until page contains element    ${elementos_nodo_catalogo_page['catalogo_subnodo_series']}
   click element   ${elementos_nodo_catalogo_page['catalogo_subnodo_series']}
 
--CLICK TICKER PLAN SELECTOR-
-  wait until page contains element    ${elementos_home_page['home_ticker']}
-  click element   ${elementos_home_page['home_ticker']}
 
--CLICK PLAN SELECTOR QUE INCLUYE CLARO VIDEO MENSUAL-
-  scroll element into view    ${elementos_plan_selector_page['claro_mensual_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['claro_mensual_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['claro_mensual_btn_incluye?']}
-
-
--BACK-
-   go back
-
--CLICK PLAN SELECTOR QUE INCLUYE CLARO VIDEO ANUAL-
-  scroll element into view    ${elementos_plan_selector_page['claro_anual_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['claro_anual_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['claro_anual_btn_incluye?']}
-
--CLICK PLAN SELECTOR QUE INCLUYE FOX-
-  scroll element into view    ${elementos_plan_selector_page['fox_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['fox_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['fox_btn_incluye?']}
-
--CLICK PLAN SELECTOR QUE INCLUYE NOGGIN-
-  scroll element into view    ${elementos_plan_selector_page['noggin_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['noggin_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['noggin_btn_incluye?']}
-
--CLICK PLAN SELECTOR QUE INCLUYE EDYE-
-  scroll element into view    ${elementos_plan_selector_page['edye_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['edye_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['edye_btn_incluye?']}
-
--CLICK PLAN SELECTOR QUE INCLUYE PICARDIA-
-  scroll element into view    ${elementos_plan_selector_page['picardia_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['picardia_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['picardia_btn_incluye?']}
-
--CLICK PLAN SELECTOR QUE INCLUYE KARAOKE-
-  scroll element into view    ${elementos_plan_selector_page['karaoke_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['karaoke_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['karaoke_btn_incluye?']}
-
--CLICK PLAN SELECTOR QUE INCLUYE QELLO-
-  scroll element into view    ${elementos_plan_selector_page['qello_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['qello_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['qello_btn_incluye?']}
-
--CLICK PLAN SELECTOR QUE INCLUYE ATRES-
-  scroll element into view    ${elementos_plan_selector_page['atres_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['atres_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['atres_btn_incluye?']}
-
--CLICK PLAN SELECTOR QUE INCLUYE HBO-
-  scroll element into view    ${elementos_plan_selector_page['hbo_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['hbo_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['hbo_btn_incluye?']}
-
--CLICK PLAN SELECTOR QUE INCLUYE INDYCAR-
-  scroll element into view    ${elementos_plan_selector_page['indycar_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['indycar_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['indycar_btn_incluye?']}
-
--CLICK PLAN SELECTOR QUE INCLUYE STARZPLAY-
-  scroll element into view    ${elementos_plan_selector_page['starzplay_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['starzplay_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['starzplay_btn_incluye?']}
-
--CLICK PLAN SELECTOR QUE INCLUYE RTVE-
-  scroll element into view    ${elementos_plan_selector_page['rtve_btn_incluye?']}
-  wait until page contains element    ${elementos_plan_selector_page['rtve_btn_incluye?']}
-  click element   ${elementos_plan_selector_page['rtve_btn_incluye?']}
 
 
 
