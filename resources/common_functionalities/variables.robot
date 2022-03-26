@@ -13,7 +13,7 @@ ${email_gratis}         abc0000000000000023@gmail.com
 ${pass_gratis}          Claro123
 
 #DirPaths
-${localpath}                /Users/neyraa/Desktop/QC-py/QC-WEB-MX
+${localpath}                /Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/
 ${screenshots-folder}      ${localpath}/Resultados/screenshots
 ${textos_payment}          ${localpath}/resources/CV-POM/paymentPage/textosPayment
 ${path_cv-pom}             ${localpath}/resources/CV-POM

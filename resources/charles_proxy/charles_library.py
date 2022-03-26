@@ -4,23 +4,19 @@ import time
 
 from datetime import datetime
 
-<<<<<<< HEAD
 charles_proxy_application_path = "/Users/at/Library/charles/Contents/MacOS/"
 local_machine_url_requests_proxy = "http://192.168.1.68:8888"
-=======
-charles_proxy_application_path = "/Users/Library/charles/Contents/MacOS/"
-local_machine_url_requests_proxy = "http://192.168.1.66:8888"
->>>>>>> 56a4e31570bfcef936bc4ebd4c8e743f7d83a175
+
 charles_proxy_start_recording_url = "http://control.charles/recording/start"
 charles_proxy_stop_recording_url = "http://control.charles/recording/stop"
 charles_proxy_download_recording_url = "http://control.charles/session/download"
-charles_proxy_configuration_file_path = "/Users/neyraa/Desktop/QC-py/QC-WEB-MX/resources/charles_proxy/com.xk72.charles.config"
-charles_local_path = "/Users/neyraa/Desktop/QC-py/QC-WEB-MX/Resultados/charles_traces/"
+charles_proxy_configuration_file_path = "/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/charles_proxy/com.xk72.charles.config"
+charles_local_path = "/Users/at/Desktop/AT-auto/robotFramework/auto_py/QC-WEB-MX/QC-WEB-MX/resources/charles_traces/"
 
 
 def start_charles_proxy_in_headless_mode():
 
-    os.system("charles" + " -headless -config " + charles_proxy_configuration_file_path + " &")
+    os.system("charles" + " -config " + charles_proxy_configuration_file_path + " &")
     time.sleep(4)
 
 

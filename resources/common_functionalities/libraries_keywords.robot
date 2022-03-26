@@ -7,7 +7,7 @@ Library       ../../resources/charles_proxy/charles_library.py
 Resource       ../common_functionalities/variables.robot
 
 Library           String
-#Library	       ExcelLibrary
+Library	       ExcelLibrary
 
 *** Keywords ***
 # Charles Keywords
