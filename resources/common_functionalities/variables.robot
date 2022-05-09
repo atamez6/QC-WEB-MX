@@ -1,6 +1,6 @@
 *** Variables ***
 #variables globales
-${browser}              chrome
+${browser}              headlesschrome
 ${browser-chrome}       chrome
 ${browser-firefox}      firefox
 ${browser-safari}       safari
